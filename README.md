@@ -1,6 +1,12 @@
 # Nintendo-DS-Lite-colorspace
 
-## Display features
+## Display specs
+
+- `Screen Size`: Dual 3.0 inches
+- `Aspect Ratio`: 4:3
+- `Resolution: Dual`: 256 x 192
+- `Dots Per Inch`: 110
+- `Screen Colors`: ~262K (6 bit)
 
 \- | Bottom screen (touchscreen) | Top screen
 --- | --- | ---
@@ -13,8 +19,6 @@ Forward Tilt Viewing (Contrast at +15°) | 96 | 109
 Horizontal Side Viewing (Contrast at ±45°) | 26 | 23
 
 (*) Contrast Ratio = Peak Brightness / Black Level Brightness (e.g. 200 / 0.31 = 645)
-
-
 
 
 
