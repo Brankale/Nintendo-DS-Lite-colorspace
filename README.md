@@ -20,8 +20,8 @@ Horizontal Side Viewing (Contrast at ±45°) | 26 | 23
 
 
 ## Links
-- colorspace conversions: http://brucelindbloom.com/index.html?WorkingSpaceInfo.html
-- Nitendo DS lite screen info:
+- Colorspace conversions: http://brucelindbloom.com/index.html?WorkingSpaceInfo.html
+- Nitendo DS Lite screen info:
   - https://www.displaymate.com/psp_ds_shootout.htm
   - (archive.org): https://web.archive.org/web/20250311235306/https://www.displaymate.com/psp_ds_shootout.htm
   - (archive.org): https://web.archive.org/web/20241006105435/https://www.displaymate.com/psp_ds_cie.jpg
