@@ -1,5 +1,24 @@
 # Nintendo-DS-Lite-colorspace
 
+## Display features
+
+\- | Bottom screen (touchscreen) | Top screen
+--- | --- | ---
+Peak Brightness | 190 cd/m2 | 200 cd/m2
+Black Level Brightness | 0.32 cd/m2 | 0.31 cd/m2
+Contrast Ratio(*) (for Low Ambient Light) | 594 | 645
+Screen Reflectance | 21% | 15%
+Contrast Ratio (for High Ambient Light) | 9 | 13
+Forward Tilt Viewing (Contrast at +15°) | 96 | 109
+Horizontal Side Viewing (Contrast at ±45°) | 26 | 23
+
+(*) Contrast Ratio = Peak Brightness / Black Level Brightness (e.g. 200 / 0.31 = 645)
+
+
+
+
+
+
 ## Links
 - colorspace conversions: http://brucelindbloom.com/index.html?WorkingSpaceInfo.html
 - Nitendo DS lite screen info:
