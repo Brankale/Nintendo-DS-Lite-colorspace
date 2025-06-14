@@ -20,6 +20,16 @@ Horizontal Side Viewing (Contrast at ±45°) | 26 | 23
 
 (*) Contrast Ratio = Peak Brightness / Black Level Brightness (e.g. 200 / 0.31 = 645)
 
+#### Greyscale Gamma
+
+- `Compression`: 6%
+- `Gamma`: 1.85
+
+<img src="https://github.com/user-attachments/assets/01df8029-a4dd-4669-b318-11a97e5951a3" alt="Alt Text" width="300">
+
+#### Chromaticity coordinates (CIE 1976 / CIELUV diagram)
+<img src="https://github.com/user-attachments/assets/61194e74-fbce-4f6c-84b4-1de8ea464c8c" alt="Alt Text" width="300">
+
 
 
 
