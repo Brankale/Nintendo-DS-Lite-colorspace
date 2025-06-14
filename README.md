@@ -40,3 +40,4 @@ Horizontal Side Viewing (Contrast at ±45°) | 26 | 23
   - (archive.org): https://web.archive.org/web/20250311235306/https://www.displaymate.com/psp_ds_shootout.htm
   - (archive.org): https://web.archive.org/web/20241006105435/https://www.displaymate.com/psp_ds_cie.jpg
   - (archive.org): https://web.archive.org/web/20241006174320/https://www.displaymate.com/psp_ds_gamma.jpg
+- CIELUV: https://en.wikipedia.org/wiki/CIELUV
