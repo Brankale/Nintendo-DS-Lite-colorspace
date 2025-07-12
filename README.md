@@ -30,8 +30,15 @@ Horizontal Side Viewing (Contrast at ±45°) | 26 | 23
 #### Chromaticity coordinates (CIE 1976 / CIELUV diagram)
 <img src="https://github.com/user-attachments/assets/61194e74-fbce-4f6c-84b4-1de8ea464c8c" alt="Alt Text" width="300">
 
+\- | u' | v'
+--- | --- | ---
+Red | 0.409649 ± 0.000877 | 0.523894 ± 0.000885
+Green | 0.136842 ± 0.000877 | 0.569027 ± 0.000885
+Blue| 0.153509 ± 0.000877 | 0.2125 ± 0.000893
+White| 0.199123 ± 0.000877 | 0.4625 ± 0.000893
 
-
+> [!WARNING]
+> extracted chromaticity values must be revised
 
 ## Links
 - Colorspace conversions: http://brucelindbloom.com/index.html
