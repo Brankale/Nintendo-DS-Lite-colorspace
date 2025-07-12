@@ -40,6 +40,27 @@ White| 0.1991 ± 0.0009 | 0.4625 ± 0.0009
 > [!WARNING]
 > extracted chromaticity values must be revised
 
+CIELUV > CIE xyY > CIE XYZ
+
+$` x = \frac{9u'}{6u'-16v'+12} `$
+
+$` y = \frac{4v'}{6u'-16v'+12} `$
+
+$` X = \frac{x}{y}Y = \frac{9u'}{4v'}Y `$
+
+$` Z = \frac{1-x-y}{y}Y = \frac{12-3u'-20v'}{4v'}Y `$
+
+\- | X | Y | Z
+--- | --- | --- | ---
+Red | TODO | 200 | TODO
+Green | TODO | 200 | TODO
+Blue| TODO | 200 | TODO
+White| TODO | 200 | TODO
+
+Y = screen brightness in cd/m2 (max NDS Lite screen brightness is 200 cd/m2)
+
+
+
 ## Links
 - Colorspace conversions: http://brucelindbloom.com/index.html
 - Nitendo DS Lite screen info:
