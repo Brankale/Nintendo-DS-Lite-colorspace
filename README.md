@@ -137,7 +137,8 @@ $`
 > 
 > $` Z = \frac{1-x-y}{y}Y = \frac{12-3u'-20v'}{4v'}Y `$
 
-Y = screen brightness in cd/m2 (max NDS Lite screen brightness is 200 cd/m2)
+> [!NOTE]
+> $`Y_{w}`$ = screen brightness in cd/m2 (max NDS Lite screen brightness is 200 cd/m2)
 
 
 
