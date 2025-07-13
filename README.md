@@ -18,7 +18,10 @@ Contrast Ratio (for High Ambient Light) | 9 | 13
 Forward Tilt Viewing (Contrast at +15°) | 96 | 109
 Horizontal Side Viewing (Contrast at ±45°) | 26 | 23
 
-(*) Contrast Ratio = Peak Brightness / Black Level Brightness (e.g. 200 / 0.31 = 645)
+> [!NOTE]
+> $` \begin{equation}\text{Contrast Ratio} = \frac{\text{Peak Brightness}}{\text{Black Level Brightness}} \end{equation} `$
+> 
+> $` e.g. \begin{equation}\text{Contrast Ratio} = \frac{200 cd/m2}{0.31 cd/m2} = 645 \end{equation} `$
 
 #### Greyscale Gamma
 
