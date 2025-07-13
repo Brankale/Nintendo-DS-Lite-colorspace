@@ -140,7 +140,23 @@ $`
 > [!NOTE]
 > $`Y_{w}`$ = screen brightness in cd/m2 (max NDS Lite screen brightness is 200 cd/m2)
 
+#### Result
 
+Given a $`Y_{w}`$ of 200 cd/m2 the RGB to CIE XYZ matrix is:
+
+$`
+\begin{equation}
+    \begin{bmatrix}
+        M
+    \end{bmatrix}
+    =
+    \begin{bmatrix}
+        84.378 & 68.724 & 40.617 \\
+        47.966 & 127.04 & 24.990 \\
+        6.7111 & 11.700 & 214.31 \\
+    \end{bmatrix}
+\end{equation}
+`$
 
 ## Links
 - Colorspace conversions: http://brucelindbloom.com/index.html
