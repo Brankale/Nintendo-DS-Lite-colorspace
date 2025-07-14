@@ -145,7 +145,7 @@ $`
 
 #### Result
 
-Given a $`Y_{w}`$ of 200 cd/m2 the RGB to CIE XYZ matrix is:
+Using a relative luminance $`Y_{w} = 1`$ the RGB to CIE XYZ matrix is:
 
 $`
 \begin{equation}
@@ -154,9 +154,9 @@ $`
     \end{bmatrix}
     =
     \begin{bmatrix}
-        84.378 & 68.724 & 40.617 \\
-        47.966 & 127.04 & 24.990 \\
-        6.7111 & 11.700 & 214.31 \\
+        0.42189 & 0.34362 & 0.20308 \\
+        0.23983 & 0.63522 & 0.12495 \\
+        0.03356 & 0.05850 & 1.0716 \\
     \end{bmatrix}
 \end{equation}
 `$
