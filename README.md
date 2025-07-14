@@ -33,6 +33,9 @@ Horizontal Side Viewing (Contrast at ±45°) | 26 | 23
 #### Chromaticity coordinates (CIE 1976 / CIELUV diagram)
 <img src="https://github.com/user-attachments/assets/61194e74-fbce-4f6c-84b4-1de8ea464c8c" alt="Alt Text" width="300">
 
+> [!WARNING]
+> extracted chromaticity values must be revised
+
 \- | u' | v'
 --- | --- | ---
 Red | 0.4096 ± 0.0009 | 0.5239 ± 0.0009
@@ -40,8 +43,32 @@ Green | 0.1368 ± 0.0009 | 0.5690 ± 0.0009
 Blue| 0.1535 ± 0.0009 | 0.2125 ± 0.0009
 White| 0.1991 ± 0.0009 | 0.4625 ± 0.0009
 
-> [!WARNING]
-> extracted chromaticity values must be revised
+[TEST ZONE]
+
+These are the raw data extracted from the chart:
+
+\- | u' | v'
+--- | --- | ---
+Red | 0.410375 ± 0.0004375 | 0.523664 ± 0.0004453
+Green | 0.137375 ± 0.0004375 | 0.569084 ± 0.0004453
+Blue| 0.154000 ± 0.0004375 | 0.212850 ± 0.0004453
+White| 0.199500 ± 0.0004375 | 0.462214 ± 0.0004453
+sRGB White| 0.197750 ± 0.0004375 | 0.469338 ± 0.0004453
+
+Expected sRGB white point coords are (0.197830, 0.468320) so the offset is (-0.000080, 0.001018).
+
+The u' coordinate's offset is lower than the absolute error (i.e. 0.000080 < 0.0004375) so we can take the raw data.
+
+The v' coordinate's offset is greater than the absolute error (i.e. 0.001018 > 0.0004453) so we must apply a small correction to the values.
+
+\- | u' | v'
+--- | --- | ---
+Red | 0.4104 ± 0.0004 | 0.5226 ± 0.0004
+Green | 0.1374 ± 0.0004 | 0.5681 ± 0.0004
+Blue| 0.1540 ± 0.0004 | 0.2118 ± 0.0004
+White| 0.1995 ± 0.0004 | 0.4612 ± 0.0004
+
+
 
 ## Colorspace conversion
 
