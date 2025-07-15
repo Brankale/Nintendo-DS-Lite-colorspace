@@ -33,18 +33,6 @@ Horizontal Side Viewing (Contrast at ±45°) | 26 | 23
 #### Chromaticity coordinates (CIE 1976 / CIELUV diagram)
 <img src="https://github.com/user-attachments/assets/61194e74-fbce-4f6c-84b4-1de8ea464c8c" alt="Alt Text" width="300">
 
-> [!WARNING]
-> extracted chromaticity values must be revised
-
-\- | u' | v'
---- | --- | ---
-Red | 0.4096 ± 0.0009 | 0.5239 ± 0.0009
-Green | 0.1368 ± 0.0009 | 0.5690 ± 0.0009
-Blue| 0.1535 ± 0.0009 | 0.2125 ± 0.0009
-White| 0.1991 ± 0.0009 | 0.4625 ± 0.0009
-
-[TEST ZONE]
-
 These are the raw data extracted from the chart:
 
 \- | u' | v'
@@ -57,9 +45,12 @@ sRGB White| 0.197750 ± 0.0004375 | 0.469338 ± 0.0004453
 
 Expected sRGB white point coords are (0.197830, 0.468320) so the offset is (-0.000080, 0.001018).
 
-The u' coordinate's offset is lower than the absolute error (i.e. 0.000080 < 0.0004375) so we can take the raw data.
+The u' coordinate's offset is lower than the absolute error (i.e. |-0.000080| < 0.0004375) so we can take the raw data.
 
-The v' coordinate's offset is greater than the absolute error (i.e. 0.001018 > 0.0004453) so we must apply a small correction to the values.
+The v' coordinate's offset is greater than the absolute error (i.e. |0.001018| > 0.0004453) so we must apply an offset of -0.001018.
+
+> [!WARNING]
+> Is it fine to offset the data or is better a scaling approach? 
 
 \- | u' | v'
 --- | --- | ---
@@ -181,9 +172,9 @@ $`
     \end{bmatrix}
     =
     \begin{bmatrix}
-        0.42189 & 0.34362 & 0.20308 \\
-        0.23983 & 0.63522 & 0.12495 \\
-        0.03356 & 0.05850 & 1.0716 \\
+        0.42210 & 0.34542 & 0.20576 \\
+        0.23889 & 0.63475 & 0.12637 \\
+        0.03620 & 0.06307 & 1.08107 \\
     \end{bmatrix}
 \end{equation}
 `$
