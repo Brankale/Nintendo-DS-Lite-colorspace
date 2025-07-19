@@ -190,3 +190,6 @@ $`
   - (archive.org): https://web.archive.org/web/20241006105435/https://www.displaymate.com/psp_ds_cie.jpg
   - (archive.org): https://web.archive.org/web/20241006174320/https://www.displaymate.com/psp_ds_gamma.jpg
 - CIELUV: https://en.wikipedia.org/wiki/CIELUV
+- LMS colorspace and chromatic adaptation matrices (i.e. Bradford, CIECAM02, CIECAM16):
+    - https://en.wikipedia.org/wiki/LMS_color_space
+    - https://en.wikipedia.org/wiki/CIECAM02
