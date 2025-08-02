@@ -186,7 +186,11 @@ $`
 \end{equation}
 `$
 
-### 2. Calculate the CAM (Chromatic Adaptation Matrix)
+### 2. Calculate the Chromatic Adaptation Matrix
+
+When performing a conversion between colorspaces with different white points you must perform a chromatic adaptation.
+
+To perform a chromatic adaptation you should use the following equation:
 
 $`
 \begin{equation}
@@ -195,7 +199,7 @@ $`
     \end{bmatrix}
     =
     \begin{bmatrix}
-        M
+        M_{CAM}
     \end{bmatrix}
     \begin{bmatrix}
         X_{S} \\ Y_{S} \\ Z_{S}
@@ -206,11 +210,11 @@ $`
 $`
 \begin{equation}
     \begin{bmatrix}
-        M
+        M_{CAM}
     \end{bmatrix}
     =
     \begin{bmatrix}
-        M_{A}
+        M_{CAT}
     \end{bmatrix}^{-1}
     \begin{bmatrix}
         L_{WD} / L_{WS} & 0 & 0 \\
@@ -218,7 +222,7 @@ $`
         0 & 0 & S_{WD} / S_{WS} \\
     \end{bmatrix}
     \begin{bmatrix}
-        M_{A}
+        M_{CAT}
     \end{bmatrix}
 \end{equation}
 `$
@@ -230,7 +234,7 @@ $`
     \end{bmatrix}
     =
     \begin{bmatrix}
-        M_{A}
+        M_{CAT}
     \end{bmatrix}
     \begin{bmatrix}
         X_{WS} \\ Y_{WS} \\ Z_{WS}
@@ -245,7 +249,7 @@ $`
     \end{bmatrix}
     =
     \begin{bmatrix}
-        M_{A}
+        M_{CAT}
     \end{bmatrix}
     \begin{bmatrix}
         X_{WD} \\ Y_{WD} \\ Z_{WD}
@@ -253,7 +257,12 @@ $`
 \end{equation}
 `$
 
-#### Bradford Adaptation Matrix
+$`M_{CAT}`$ is the chromatic adaptation trasform matrix. There are different CAT matrices to choose from (e.g. Bradford, CIECAT02, CIECAT16). CIECAT16 is the most recent and also the most accurate even if it's not the industry standard.
+
+> [!NOTE]
+> For the calculations I'll use the CIECAT16 which is the most accurate, however I performed tests also with the other matrices and the difference is barely visible in normal scenarios.
+
+#### Bradford Matrix
 $`
 \begin{equation}
     \begin{bmatrix}
@@ -268,7 +277,7 @@ $`
 \end{equation}
 `$
 
-#### CIECAT02 Adaptation Matrix
+#### CIECAT02 Matrix
 
 $`
 \begin{equation}
@@ -284,7 +293,7 @@ $`
 \end{equation}
 `$
 
-#### CIECAT16 Adaptation Matrix
+#### CIECAT16 Matrix
 
 $`
 \begin{equation}
