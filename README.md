@@ -182,6 +182,121 @@ $`
 \end{equation}
 `$
 
+### 2. Calculate the CAM (Chromatic Adaptation Matrix)
+
+$`
+\begin{equation}
+    \begin{bmatrix}
+        X_{D} \\ Y_{D} \\ Z_{D}
+    \end{bmatrix}
+    =
+    \begin{bmatrix}
+        M
+    \end{bmatrix}
+    \begin{bmatrix}
+        X_{S} \\ Y_{S} \\ Z_{S}
+    \end{bmatrix}
+\end{equation}
+`$
+
+$`
+\begin{equation}
+    \begin{bmatrix}
+        M
+    \end{bmatrix}
+    =
+    \begin{bmatrix}
+        M_{A}
+    \end{bmatrix}^{-1}
+    \begin{bmatrix}
+        L_{WD} / L_{WS} & 0 & 0 \\
+        0 & M_{WD} / M_{WS} & 0 \\
+        0 & 0 & S_{WD} / S_{WS} \\
+    \end{bmatrix}
+    \begin{bmatrix}
+        M_{A}
+    \end{bmatrix}
+\end{equation}
+`$
+
+$`
+\begin{equation}
+    \begin{bmatrix}
+        L_{WS} \\ M_{WS} \\ S_{WS}
+    \end{bmatrix}
+    =
+    \begin{bmatrix}
+        M_{A}
+    \end{bmatrix}
+    \begin{bmatrix}
+        X_{WS} \\ Y_{WS} \\ Z_{WS}
+    \end{bmatrix}
+\end{equation}
+`$
+
+$`
+\begin{equation}
+    \begin{bmatrix}
+        L_{WD} \\ M_{WD} \\ S_{WD}
+    \end{bmatrix}
+    =
+    \begin{bmatrix}
+        M_{A}
+    \end{bmatrix}
+    \begin{bmatrix}
+        X_{WD} \\ Y_{WD} \\ Z_{WD}
+    \end{bmatrix}
+\end{equation}
+`$
+
+#### Bradford Adaptation Matrix
+$`
+\begin{equation}
+    \begin{bmatrix}
+        M_{BF}
+    \end{bmatrix}
+    =
+    \begin{bmatrix}
+         0.8951 &  0.2664 & -0.1614 \\
+        -0.7502 &  1.7135 &  0.0367 \\
+         0.0389 & -0.0685 &  1.0296 \\
+    \end{bmatrix}
+\end{equation}
+`$
+
+#### CIECAT02 Adaptation Matrix
+
+$`
+\begin{equation}
+    \begin{bmatrix}
+        M_{CAT02}
+    \end{bmatrix}
+    =
+    \begin{bmatrix}
+         0.7328 & 0.4296 & -0.1624 \\
+        -0.7036 & 1.6975 &  0.0061 \\
+         0.0030 & 0.0136 &  0.9834 \\
+    \end{bmatrix}
+\end{equation}
+`$
+
+#### CIECAT16 Adaptation Matrix
+
+$`
+\begin{equation}
+    \begin{bmatrix}
+        M_{CAT16}
+    \end{bmatrix}
+    =
+    \begin{bmatrix}
+         0.401288 & 0.650173 & -0.051461 \\
+        -0.250268 & 1.204414 &  0.045854 \\
+        -0.002079 & 0.048952 &  0.953127 \\
+    \end{bmatrix}
+\end{equation}
+`$
+
+
 ## Links
 - Colorspace conversions: http://brucelindbloom.com/index.html
 - Nitendo DS Lite screen info:
@@ -190,6 +305,6 @@ $`
   - (archive.org): https://web.archive.org/web/20241006105435/https://www.displaymate.com/psp_ds_cie.jpg
   - (archive.org): https://web.archive.org/web/20241006174320/https://www.displaymate.com/psp_ds_gamma.jpg
 - CIELUV: https://en.wikipedia.org/wiki/CIELUV
-- LMS colorspace and chromatic adaptation matrices (i.e. Bradford, CIECAM02, CIECAM16):
+- LMS colorspace and chromatic adaptation matrices (i.e. Bradford, CIECAT02, CIECAT16):
     - https://en.wikipedia.org/wiki/LMS_color_space
     - https://en.wikipedia.org/wiki/CIECAM02
