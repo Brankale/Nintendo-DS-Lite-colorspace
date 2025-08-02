@@ -257,10 +257,7 @@ $`
 \end{equation}
 `$
 
-$`M_{CAT}`$ is the chromatic adaptation trasform matrix. There are different CAT matrices to choose from (e.g. Bradford, CIECAT02, CIECAT16). CIECAT16 is the most recent and also the most accurate even if it's not the industry standard.
-
-> [!NOTE]
-> For the calculations I'll use the CIECAT16 which is the most accurate, however I performed tests also with the other matrices and the difference is barely visible in normal scenarios.
+$`M_{CAT}`$ is the chromatic adaptation trasform matrix. There are different CAT matrices to choose from (e.g. Von Kries, Bradford, CIECAT97, CIECAT02, CIECAT16). CIECAT16 is the most recent and also the most accurate even if it's not the industry standard. Below I have reported only the most relevant ones:
 
 #### Bradford Matrix
 $`
@@ -308,6 +305,9 @@ $`
     \end{bmatrix}
 \end{equation}
 `$
+
+> [!NOTE]
+> For the calculations I'll use the CIECAT16 which is the most accurate, however I performed tests also with the other matrices and the difference is barely visible in normal scenarios.
 
 
 ## Links
