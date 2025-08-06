@@ -105,7 +105,7 @@ void main()
     vec3 display_rgb = oetf_srgb(display_linearized_rgb);
 
     // post processing: out of gamut
-    display_rgb = compute_out_of_gamut(display_rgb, display_xyz.y);
+    // display_rgb = compute_out_of_gamut(display_rgb, display_xyz.y);
 
     gl_FragColor = vec4(display_rgb.x, display_rgb.y, display_rgb.z, source_color.w);
 
