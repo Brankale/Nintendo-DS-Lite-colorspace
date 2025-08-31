@@ -6,7 +6,7 @@
 
 ## Display specs
 
-- `Screen Size`: Dual 3.0 inches (7.62 cm diameter)
+- `Screen Size`: 3.0 inches (7.62 cm diagonal)
 - `Aspect Ratio`: 4:3
 - `Resolution: Dual`: 256 x 192
 - `Dots pitch`: 0.24 mm
@@ -106,7 +106,27 @@ $`
 \end{equation}
 `$
 
-XYZ values are
+the scaling factors $`(S_{r}, S_{g}, S_{b})`$ are
+
+$`
+\begin{equation}
+    \begin{bmatrix}
+        S_{r} \\ S_{g} \\ S_{b}
+    \end{bmatrix}
+    =
+    \begin{bmatrix}
+        X_{r} & X_{g} & X_{b} \\
+        Y_{r} & Y_{g} & Y_{b} \\
+        Z_{r} & Z_{g} & Z_{b} \\
+    \end{bmatrix}
+    ^{-1}
+    \begin{bmatrix}
+        X_{w} \\ Y_{w} \\ Z_{w}
+    \end{bmatrix}
+\end{equation}
+`$
+
+and XYZ values are
 
 $`
 \begin{align}
@@ -132,24 +152,12 @@ $`
 \end{align}
 `$
 
-and the scaling factors $`(S_{r}, S_{g}, S_{b})`$ are
-
 $`
-\begin{equation}
-    \begin{bmatrix}
-        S_{r} \\ S_{g} \\ S_{b}
-    \end{bmatrix}
-    =
-    \begin{bmatrix}
-        X_{r} & X_{g} & X_{b} \\
-        Y_{r} & Y_{g} & Y_{b} \\
-        Z_{r} & Z_{g} & Z_{b} \\
-    \end{bmatrix}
-    ^{-1}
-    \begin{bmatrix}
-        X_{w} \\ Y_{w} \\ Z_{w}
-    \end{bmatrix}
-\end{equation}
+\begin{align}
+    & X_{w} = \frac{x_{w}}{y_{w}} &
+    & Y_{w} = 1 &
+    & Z_{w} = \frac{1-x_{w}-y_{w}}{y_{w}}
+\end{align}
 `$
 
 > [!NOTE]
@@ -166,12 +174,10 @@ $`
 > 
 > $` Z = \frac{1-x-y}{y}Y = \frac{12-3u'-20v'}{4v'}Y `$
 
-> [!NOTE]
-> $`Y_{w}`$ = screen brightness in cd/m2. When calculating CIE XYZ conversion matrix we must use a relative luminance of 1.0 instead of the absolute screen luminance (i.e. 200 cd/m2).
 
 #### Result
 
-Using a relative luminance $`Y_{w} = 1`$ the RGB to CIE XYZ matrix is:
+Given the NDS Lite chromaticity coordinates of the primaries and the white point, the RGB to CIE XYZ matrix is:
 
 $`
 \begin{equation}
@@ -189,7 +195,7 @@ $`
 
 ### 2. Calculate the Chromatic Adaptation Matrix
 
-When performing a conversion between colorspaces with different white points a chromatic adaptation must also be applied.
+When performing a conversion between two colorspaces with a different white point, a chromatic adaptation must also be applied.
 
 To perform a chromatic adaptation you must use the following equation:
 
