@@ -264,10 +264,9 @@ $`
 \end{equation}
 `$
 
-You can choose among several chromatic adaptation transforms (CATs) such as: Von Kries, Bradford, CIECAT02 and CIECAT16. Despite being older than CIECAT02 and its revision CIECAT16, the Bradford matrix is still the industry standard, with numerous studies demonstrating its accuracy.
+You can choose among several chromatic adaptation transforms (CATs) such as: Von Kries, Bradford, CIECAT02 and CIECAT16.
 
-> [!NOTE]
-> For the calculations I'll use the Bradford matrix.
+
 
 #### Von Kries matrix (not recommended)
 $`
@@ -284,7 +283,7 @@ $`
 \end{equation}
 `$
 
-#### Bradford matrix (recommended)
+#### Bradford matrix
 $`
 \begin{equation}
     \begin{bmatrix}
@@ -299,7 +298,7 @@ $`
 \end{equation}
 `$
 
-#### CIECAT02 matrix
+#### CIECAT02 matrix (*)
 
 $`
 \begin{equation}
@@ -315,7 +314,7 @@ $`
 \end{equation}
 `$
 
-#### CIECAT16 matrix
+#### CIECAT16 matrix (*)
 
 $`
 \begin{equation}
@@ -330,6 +329,10 @@ $`
     \end{bmatrix}
 \end{equation}
 `$
+
+> [!WARNING]
+> (*) CIECAT02 and its revision CIECAT16 should provide higher accuracy than the Bradford matrix, however they likely involve more complex operations than a simple 3×3 matrix multiplication as can be seen here: https://en.wikipedia.org/wiki/CIECAM02.
+> Since there are few publicly available resources to support precise calculations with these models, the Bradford matrix will be used to minimize the risk of errors.
 
 
 ## Links
