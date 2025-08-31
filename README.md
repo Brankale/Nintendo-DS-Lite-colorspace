@@ -6,10 +6,11 @@
 
 ## Display specs
 
-- `Screen Size`: Dual 3.0 inches
+- `Screen Size`: Dual 3.0 inches (7.62 cm diameter)
 - `Aspect Ratio`: 4:3
 - `Resolution: Dual`: 256 x 192
-- `Dots Per Inch`: 110
+- `Dots pitch`: 0.24 mm
+- `PPI`: 106.67
 - `Screen Colors`: 6 bits per channel (18‑bit total, 262,144 colors)
 
 \- | Bottom screen (touchscreen) | Top screen
@@ -57,7 +58,7 @@ The u' coordinate's offset is lower than the absolute error (i.e. |$`u'_{offset}
 The v' coordinate's offset is greater than the absolute error (i.e. |$`v'_{offset}`$| > 0.0004453) so we must apply an offset of $`-v'_{offset}`$.
 
 > [!WARNING]
-> Is it fine to offset the data or is better a scaling approach? 
+> Offsetting the $`v'_{offset}`$ is probably not the best solution and should not be considered as a best practice.
 
 \- | u' | v'
 --- | --- | ---
@@ -332,6 +333,7 @@ $`
   - (archive.org): https://web.archive.org/web/20250311235306/https://www.displaymate.com/psp_ds_shootout.htm
   - (archive.org): https://web.archive.org/web/20241006105435/https://www.displaymate.com/psp_ds_cie.jpg
   - (archive.org): https://web.archive.org/web/20241006174320/https://www.displaymate.com/psp_ds_gamma.jpg
+  - https://www.nintendo.com/en-gb/Support/Nintendo-DS-Lite/Product-Information/Technical-data/Product-Information-242119.html
 - CIELUV: https://en.wikipedia.org/wiki/CIELUV
 - LMS colorspace and chromatic adaptation matrices (i.e. Bradford, CIECAT02, CIECAT16):
     - https://en.wikipedia.org/wiki/LMS_color_space
