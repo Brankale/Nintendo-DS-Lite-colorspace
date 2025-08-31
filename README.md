@@ -257,12 +257,12 @@ $`
 \end{equation}
 `$
 
-$`M_{CAT}`$ is the chromatic adaptation transform matrix. There are different CAT matrices to choose from (e.g. Von Kries, Bradford, CIECAT02, CIECAT16). The Bradford matrix is the industry standard, however CIECAT16 is the most recent and, theoretically speaking, the most accurate. Be aware that between these matrices (except for the Von Kries one) there's not a noticeable difference during normal gameplay.
+You can choose among several chromatic adaptation transforms (CATs) such as: Von Kries, Bradford, CIECAT02 and CIECAT16. Despite being older than CIECAT02 and its revision CIECAT16, the Bradford matrix is still the industry standard, with numerous studies demonstrating its accuracy.
 
 > [!NOTE]
-> For the calculations I'll use the CIECAT16 matrix.
+> For the calculations I'll use the Bradford matrix.
 
-#### Von Kries Matrix (not recommended)
+#### Von Kries matrix (not recommended)
 $`
 \begin{equation}
     \begin{bmatrix}
@@ -277,7 +277,7 @@ $`
 \end{equation}
 `$
 
-#### Bradford Matrix
+#### Bradford matrix (recommended)
 $`
 \begin{equation}
     \begin{bmatrix}
@@ -292,7 +292,7 @@ $`
 \end{equation}
 `$
 
-#### CIECAT02 Matrix
+#### CIECAT02 matrix
 
 $`
 \begin{equation}
@@ -308,7 +308,7 @@ $`
 \end{equation}
 `$
 
-#### CIECAT16 Matrix
+#### CIECAT16 matrix
 
 $`
 \begin{equation}
