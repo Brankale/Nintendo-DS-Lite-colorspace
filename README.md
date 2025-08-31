@@ -105,7 +105,7 @@ $`
 \end{equation}
 `$
 
-where
+XYZ values are
 
 $`
 \begin{align}
@@ -131,7 +131,7 @@ $`
 \end{align}
 `$
 
-where the scaling factors $`(S_{r}, S_{g}, S_{b})`$ are
+and the scaling factors $`(S_{r}, S_{g}, S_{b})`$ are
 
 $`
 \begin{equation}
@@ -257,7 +257,25 @@ $`
 \end{equation}
 `$
 
-$`M_{CAT}`$ is the chromatic adaptation transform matrix. There are different CAT matrices to choose from (e.g. Von Kries, Bradford, CIECAT97, CIECAT02, CIECAT16). The Bradford matrix is the industry standard, however CIECAT16 is the most recent and, theoretically speaking, the most accurate. Below I have reported only the most relevant ones:
+$`M_{CAT}`$ is the chromatic adaptation transform matrix. There are different CAT matrices to choose from (e.g. Von Kries, Bradford, CIECAT02, CIECAT16). The Bradford matrix is the industry standard, however CIECAT16 is the most recent and, theoretically speaking, the most accurate. Be aware that between these matrices (except for the Von Kries one) there's not a noticeable difference during normal gameplay.
+
+> [!NOTE]
+> For the calculations I'll use the CIECAT16 matrix.
+
+#### Von Kries Matrix (not recommended)
+$`
+\begin{equation}
+    \begin{bmatrix}
+        M_{VK}
+    \end{bmatrix}
+    =
+    \begin{bmatrix}
+         0.40024 &  0.70760 & -0.08081 \\
+        -0.22630 &  1.16532 &  0.04570 \\
+         0.00000 & 0.00000 &  0.91822 \\
+    \end{bmatrix}
+\end{equation}
+`$
 
 #### Bradford Matrix
 $`
@@ -306,13 +324,10 @@ $`
 \end{equation}
 `$
 
-> [!NOTE]
-> For the calculations I'll use the CIECAT16 which is the most accurate, however I performed tests also with the other matrices and the difference is barely visible in normal scenarios.
-
 
 ## Links
 - Colorspace conversions: http://brucelindbloom.com/index.html
-- Nitendo DS Lite screen info:
+- Nintendo DS Lite screen info:
   - https://www.displaymate.com/psp_ds_shootout.htm
   - (archive.org): https://web.archive.org/web/20250311235306/https://www.displaymate.com/psp_ds_shootout.htm
   - (archive.org): https://web.archive.org/web/20241006105435/https://www.displaymate.com/psp_ds_cie.jpg
