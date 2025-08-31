@@ -166,7 +166,7 @@ $`
 > $` Z = \frac{1-x-y}{y}Y = \frac{12-3u'-20v'}{4v'}Y `$
 
 > [!NOTE]
-> $`Y_{w}`$ = screen brightness in cd/m2 (max NDS Lite screen brightness is 200 cd/m2)
+> $`Y_{w}`$ = screen brightness in cd/m2. When calculating CIE XYZ conversion matrix we must use a relative luminance of 1.0 cd/m2 instead of the absolute screen luminance (i.e. 200 cd/m2).
 
 #### Result
 
@@ -188,9 +188,9 @@ $`
 
 ### 2. Calculate the Chromatic Adaptation Matrix
 
-When performing a conversion between colorspaces with different white points you must perform a chromatic adaptation.
+When performing a conversion between colorspaces with different white points a chromatic adaptation must also be applied.
 
-To perform a chromatic adaptation you should use the following equation:
+To perform a chromatic adaptation you must use the following equation:
 
 $`
 \begin{equation}
@@ -257,7 +257,7 @@ $`
 \end{equation}
 `$
 
-$`M_{CAT}`$ is the chromatic adaptation trasform matrix. There are different CAT matrices to choose from (e.g. Von Kries, Bradford, CIECAT97, CIECAT02, CIECAT16). CIECAT16 is the most recent and also the most accurate even if it's not the industry standard. Below I have reported only the most relevant ones:
+$`M_{CAT}`$ is the chromatic adaptation trasform matrix. There are different CAT matrices to choose from (e.g. Von Kries, Bradford, CIECAT97, CIECAT02, CIECAT16). The Bradford matrix is the industry standard, however CIECAT16 is the most recent and, theoretically speaking, the most accurate. Below I have reported only the most relevant ones:
 
 #### Bradford Matrix
 $`
