@@ -1,7 +1,7 @@
 # Nintendo-DS-Lite-colorspace
 
 > [!IMPORTANT]
-> I'm not a color expert. All information you can found here is the result of my research. Take this info with a grain of salt.
+> I'm not a color expert. All information you can find here is the result of my research. Take this info with a grain of salt.
 > If you notice any errors, feel free to open an issue or a PR, but don't expect any replies or fixes. This is in fact a personal project, and I work on it in my spare time.
 
 ## Display specs
@@ -10,7 +10,7 @@
 - `Aspect Ratio`: 4:3
 - `Resolution: Dual`: 256 x 192
 - `Dots Per Inch`: 110
-- `Screen Colors`: ~262K (6 bit)
+- `Screen Colors`: 6 bits per channel (18‑bit total, 262,144 colors)
 
 \- | Bottom screen (touchscreen) | Top screen
 --- | --- | ---
@@ -34,7 +34,7 @@ Horizontal Side Viewing (Contrast at ±45°) | 26 | 23
 
 <img src="https://github.com/user-attachments/assets/01df8029-a4dd-4669-b318-11a97e5951a3" alt="Alt Text" width="300">
 
-#### Chromaticity coordinates (CIE 1976 / CIELUV diagram)
+#### Chromaticity coordinates (CIE 1976 UCS chromaticity diagram)
 <img src="https://github.com/user-attachments/assets/61194e74-fbce-4f6c-84b4-1de8ea464c8c" alt="Alt Text" width="300">
 
 These are the raw data extracted from the chart:
@@ -166,7 +166,7 @@ $`
 > $` Z = \frac{1-x-y}{y}Y = \frac{12-3u'-20v'}{4v'}Y `$
 
 > [!NOTE]
-> $`Y_{w}`$ = screen brightness in cd/m2. When calculating CIE XYZ conversion matrix we must use a relative luminance of 1.0 cd/m2 instead of the absolute screen luminance (i.e. 200 cd/m2).
+> $`Y_{w}`$ = screen brightness in cd/m2. When calculating CIE XYZ conversion matrix we must use a relative luminance of 1.0 instead of the absolute screen luminance (i.e. 200 cd/m2).
 
 #### Result
 
@@ -257,7 +257,7 @@ $`
 \end{equation}
 `$
 
-$`M_{CAT}`$ is the chromatic adaptation trasform matrix. There are different CAT matrices to choose from (e.g. Von Kries, Bradford, CIECAT97, CIECAT02, CIECAT16). The Bradford matrix is the industry standard, however CIECAT16 is the most recent and, theoretically speaking, the most accurate. Below I have reported only the most relevant ones:
+$`M_{CAT}`$ is the chromatic adaptation transform matrix. There are different CAT matrices to choose from (e.g. Von Kries, Bradford, CIECAT97, CIECAT02, CIECAT16). The Bradford matrix is the industry standard, however CIECAT16 is the most recent and, theoretically speaking, the most accurate. Below I have reported only the most relevant ones:
 
 #### Bradford Matrix
 $`
