@@ -4,13 +4,6 @@
 > I'm not a color expert. All information you can find here is the result of my research. Take this info with a grain of salt.
 > If you notice any errors, feel free to open an issue or a PR, but don't expect any replies or fixes. This is in fact a personal project, and I work on it in my spare time.
 
-## Measurements
-
-- `author`: DisplayMate Technologies Corporation
-- `meter`: Konica Minolta CS-200
-- `meter type`: spectroradiometer
-- `measurement methodology`: https://web.archive.org/web/20241102042303/https://www.displaymate.com/mobile_testing.htm
-
 ## Display specs
 
 - `Screen Size`: 3.0 inches (7.62 cm diagonal)
@@ -19,6 +12,14 @@
 - `Dots pitch`: 0.24 mm
 - `PPI`: 106.67
 - `Screen Colors`: 6 bits per channel (18‑bit total, 262,144 colors)
+
+## Measurements
+
+- `author`: DisplayMate Technologies Corporation
+- `meter`: Konica Minolta CS-200
+- `meter type`: spectroradiometer
+- `methodology`: https://web.archive.org/web/20241102042303/https://www.displaymate.com/mobile_testing.htm
+
 
 \- | Bottom screen (touchscreen) | Top screen
 --- | --- | ---
