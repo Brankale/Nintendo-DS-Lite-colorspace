@@ -1,11 +1,13 @@
 ## General Info
 
-- `author`: your name
+- `author`: the author name of the .
 - `date`: the date of the measurement. This is important because screen colors tends to degrade over time and with use. Knowing the time a measurement was taken can help ensure the accuracy of the measurements.
-- `meter`: name of the meter used
-- `meter type`: [colorimeter, spectroradiometer, spectrophotometer]
-- `console`: the console measured
-- `measured screen manufacturer`: the manufacturer of the measured screen
+- `meter`: name of the meter used.
+- `meter type`: [colorimeter, spectroradiometer, spectrophotometer].
+- `console`: the console measured.
+- `measured screen manufacturer`: the manufacturer of the measured screen.
+- `measurement software`: the name of the software used to make the measurements.
+- `measurement software version`: the version of the software used to make the measurements.
 
 ## Display type
 - `emissive`: the screen directly generates the light needed to form the image.
