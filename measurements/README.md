@@ -1,3 +1,6 @@
+> [!WARNING]
+> Some parts of this guide has been developed with AI assistance. If you find any issues or misleading info feel free to contribute.
+
 # Displays types
 
 - `Emissive`: the display **emits its own light** (no external illumination needed).
@@ -19,9 +22,11 @@ Depending on the display type, you must use the appropriate meter to ensure accu
 
 | Meter  | Emissive | Reflective | Transflective |
 | ------------- | :-------------: | :-------------: | :-------------: | 
-| Colorimeter        | ✅ (good accuracy) | ❓ | ❓ |
-| Spectroradiometer  | ✅ (highest accuracy) | ❓ | ❓ |
-| Spectrophotometer  | ❌ | ✅ | ❓ |
+| Colorimeter        | ✅ good accuracy | ❓ | ❓ |
+| Spectroradiometer  | ✅ highest accuracy | ❓ | ❓ |
+| Spectrophotometer  | ⚠️ not recommended (*) | ✅ | ❓ |
+
+(*) A spectrophotometer primarily measures reflected light from surfaces. Some models have an “emissive mode,” but they’re generally slower, less sensitive at low light, and not ideal for bright HDR peaks or very dark near-black, common in emissive displays.
 
 # Do the measurements
 
@@ -29,7 +34,7 @@ Depending on the display type, you must use the appropriate meter to ensure accu
 
 Handheld LCD screens present several challenges:
 - color variations depending on the **viewing angle** (especially on TN panels).
-- variation in **color tint** caused by the ‘screen lottery’ phenomenon in certain handhelds (e.g. the 3DS), where manufacturing tolerances cause units with the same nominal display model to exhibit distinct color characteristics.
+- variation in **color tint/brightness/gamma** caused by the 'screen lottery' phenomenon in certain handhelds (e.g. the 3DS), where manufacturing tolerances cause units with the same nominal display model to exhibit distinct color characteristics.
 - different **screen manufacturers**: some handhelds have different screen manufacturers (e.g. NDS Lite has LCD screens coming from Hitachi and Sharp (1)(2)) which can cause color variations across different units of the same handheld. 
 - **screen protectors and touchscreens** (aka screen digitizers) can affect color accuracy, especially if they are old and have been exposed to sunlight, which can degrade the plastic and cause a yellowish tint.
 
@@ -61,22 +66,26 @@ To achieve reproducible and accurate measurements, you must:
   * **With screen protector**: Place the sensor in contact with the protector to keep it perpendicular, reduce light leakage, and minimize external light influence.
   * **Without screen protector**: Place the sensor directly on the screen but avoid pressing too hard to prevent distortion or Newton rings. Alternatively, position the meter very close to the screen, ensuring perpendicular alignment—small viewing angle changes can significantly affect color and brightness on TN panels.
 
+### What to Measure
 
-### What to measure
+To accurately characterize a handheld screen’s colorspace, you should record the following data:
+* **Chromaticity coordinates** of the three primaries (R, G, B).
+* **Chromaticity coordinates of the white point (W)**.
+* **Gamma response of the three channels (R, G, B)**:
+  * Use stepped ramps with increments of **10% or smaller** for greater accuracy.
+  * Include additional fine measurements near **white (96–99%)** and **black (1–4%)** levels, as these regions are the most prone to errors.
+* **Maximum luminance (full white)** of the display.
+* **Minimum luminance (full black)** of the display.
 
-In order to replicate the screen colorspace the following data must be measured:
-- chromaticity coordinates of the three primaries (R, G, B)
-- chromaticity coordinate of the white point (W)
-- gamma curve of the three channels (R, G, B)
-- maximum luminance of display (White)
-- minimum luminance of the display (Black)
+If the handheld has multiple screens (e.g., Nintendo DS family), measure **both top and bottom panels**.
+* In some systems (e.g., NDS Lite), the panels are identical, but the bottom screen includes a **touch layer** that can slightly degrade image quality.
+* If you want to reduce workload, prioritize measuring the **non-touch screen**, as it represents the display’s best possible performance.
 
-In order to preserve all the possible info, both top and bottom screen must be measured if present (e.g. NDS consoles). In some cases the top and bottom displays are the same (e.g. NDS Lite), the only difference is the touch screen layer which tend to degrade the image quality. If you don't want to measure all the screens prefer the one without the touch screen which provides the best image quality. 
 
 ## Measurements report (template)
 
 - `author`: the author name of the measurements.
-- `date`: the date of the measurement. This is important because screen colors tends to degrade over time and with use. Recording the measurement date helps track screen aging and maintain accuracy.
+- `date`: the date of the measurement. This is important because screen colors degrade over time and with use. Recording the measurement date helps track screen aging and maintain accuracy.
 - `handheld`: the measured handheld.
 - **screen**
     - `type`: emissive / reflective / transflective
@@ -111,8 +120,8 @@ To validate the results of a colorspace conversion:
 
 
 # External links
-
 1. https://www.audioholics.com/news/nintendo-ds-price-fixing
 2. https://www.wired.com/2008/02/sharp-hitachi-s
+3. https://www.youtube.com/@hdtvtest channel
 
   
