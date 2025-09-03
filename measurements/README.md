@@ -81,6 +81,19 @@ If the handheld has multiple screens (e.g., Nintendo DS family), measure **both 
 * In some systems (e.g., NDS Lite), the panels are identical, but the bottom screen includes a **touch layer** that can slightly degrade image quality.
 * If you want to reduce workload, prioritize measuring the **non-touch screen**, as it represents the display’s best possible performance.
 
+#### Example (using HCFR software)
+
+R, G and B channels chromaticity coordinates (CIE xyY coordinates):
+<img width="640" height="360" alt="Screenshot From 2025-09-03 16-44-40" src="https://github.com/user-attachments/assets/c5f60803-f372-4492-9f95-d2b5de59b2b2" />
+
+White chromaticity coordinates (CIE xyY coordinates) + white/black luminance:
+<img width="640" height="360" alt="Screenshot From 2025-09-03 16-44-50" src="https://github.com/user-attachments/assets/1f97ca9c-6f21-4f67-966b-7b58643b0e8f" />
+
+RGB gamma curves (10%-90%) + near black & near white gamma:
+<img width="640" height="360" alt="Screenshot From 2025-09-03 16-41-30" src="https://github.com/user-attachments/assets/0da55b1e-0ed9-4180-984f-b7dba6b7bda5" />
+<img width="640" height="360" alt="Screenshot From 2025-09-03 16-42-56" src="https://github.com/user-attachments/assets/a7dbbe27-1221-4b59-b534-2eef6343097d" />
+<img width="640" height="360" alt="Screenshot From 2025-09-03 16-43-21" src="https://github.com/user-attachments/assets/e3d8ee77-480a-4828-acb9-23a16e1e4623" />
+
 
 ## Measurements report (template)
 
@@ -96,13 +109,17 @@ If the handheld has multiple screens (e.g., Nintendo DS family), measure **both 
     - `name`: name of the meter used.
     - `type`: colorimeter / spectroradiometer / spectrophotometer
 - **measurements**
-   - `software name`: the software name used to make the measurements.
+   - `software name`: the software name used to make the measurements (e.g., HCFR).
    - `software version`: the version of the software used to make the measurements.
    - `screen warm-up`: yes / no
    - `no external light sources`: yes / no
    - `charger`: yes / no
    - `no screen protector / touchscreen`: yes / no
 - `notes`: any relevant info about the screen, the measurements etc.
+
+> [!IMPORTANT]
+> Always share your full measurement data in a readable format, along with the raw files (e.g., `.chc` files if you use HCFR). This ensures that others can review and verify your work.
+> If you only share the final results (such as shaders or LUTs) without the underlying data, your work cannot be reproduced or improved upon.
 
 # **Measurements Validation**
 
