@@ -11,15 +11,13 @@
 - `quantization`: does the screen present quantization? How many bits per color? (e.g. NDS Lite has 6 bit per channel => ~262K colors)
 
 
-## Display type
+# Displays types
+
 - `Emissive`: the display **emits its own light** (no external illumination needed).
 - `Reflective`: the display **does not emit light**; it reflects ambient light. Pixels modulate reflection rather than emitting.
 - `Transflective`: **hybrid** of emissive and reflective. A backlight is present, but the display can also use ambient light (via a partially reflective layer).
 
-> [!WARNING]
-> Every display type require different measurements methodologies to get accurate results.
-
-### Handhelds display type
+## Handhelds display type
 
 - `Emissive`: `GBA SP`, `NDS Phat`, `NDS Lite`, `NDSi (XL)`, `2DS (XL)`, `3DS (XL)`, `New 2DS (XL)`, `New 3DS (XL)`
 - `Reflective`: TODO
@@ -50,7 +48,7 @@ Handheld LCD screen present a lot of challanges:
 
 The goal is to **measure the best possible scenario**, removing all the factors which can degrade image quality.
 
-## Emissive display measurements guide
+## Measurements guide for emissive displays
 
 ### Environment setup
 
@@ -88,11 +86,19 @@ In order to replicate the screen colorspace the following data must be measured:
 
 In order to preserve all the possible info, both top and bottom screen must be measured if present (e.g. NDS consoles). In some cases the top and bottom displays are the same (e.g. NDS Lite), the only difference is the touch screen layer which tends to degrade the image quality. If you don't want to measure all the screens prefer the one without the touch screen which provides the best image quality. 
 
-# Measurements validation
+# **Measurements Validation**
 
-In order to validate the results you must:
-- calibrate your display. If not possible use a display known to have a good default factory calibration. Any kind of display which doesn't fit this requirement (a lot of displays unfortunately) should not be used to make judgements or adjustments on the measurements.
-- disable all the monitor image post processing settings (e.g. dynamic contrast). These can alter the colors.
+To validate the results of a colorspace conversion:
+
+1. **Calibrate your display**
+   * Use a hardware colorimeter or spectroradiometer to calibrate your display to the target colorspace (e.g., sRGB, DisplayP3 (P3 D65), Rec. 2020). Ensure you use a colorimeter or spectroradiometer capable of accurately measuring wide-gamut colorspaces, as not all devices support them correctly.
+   * If hardware calibration is not possible, use a high-quality display with verified calibration, but note that results may have small deviations.
+2. **Disable all display enhancements**
+   * Turn off dynamic contrast, local dimming, HDR, blue-light filters, ABL (automatic brightness limiter) or any post-processing features that can alter color or gamma.
+  
+> [!WARNING]
+> If you can't meet these requirements, please avoid performing this validation since you cannot reliably validate the results. If you still wish to provide opinions on the results be sure to give all the context to avoid misleading info.
+
 
 # External links
 
