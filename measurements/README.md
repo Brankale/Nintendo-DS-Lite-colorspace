@@ -1,6 +1,6 @@
 ## General Info
 
-- `author`: the author name of the .
+- `author`: the author name of the measurements.
 - `date`: the date of the measurement. This is important because screen colors tends to degrade over time and with use. Knowing the time a measurement was taken can help ensure the accuracy of the measurements.
 - `meter`: name of the meter used.
 - `meter type`: [colorimeter, spectroradiometer, spectrophotometer].
@@ -8,14 +8,37 @@
 - `measured screen manufacturer`: the manufacturer of the measured screen.
 - `measurement software`: the name of the software used to make the measurements.
 - `measurement software version`: the version of the software used to make the measurements.
-
-## Display type
-- `emissive`: the screen directly generates the light needed to form the image.
-- `reflective`: the screen does not emit its own light, but uses reflected ambient light.
 - `quantization`: does the screen present quantization? How many bits per color? (e.g. NDS Lite has 6 bit per channel => ~262K colors)
 
+
+## Display type
+- `Emissive`: the display **emits its own light** (no external illumination needed).
+- `Reflective`: the display **does not emit light**; it reflects ambient light. Pixels modulate reflection rather than emitting.
+- `Transflective`: **hybrid** of emissive and reflective. A backlight is present, but the display can also use ambient light (via a partially reflective layer).
+
 > [!WARNING]
-> These two types of displays require different types of measurements.
+> Every display type require different measurements methodologies to get accurate results.
+
+### Handhelds display type
+
+- `Emissive`: `GBA SP`, `NDS Phat`, `NDS Lite`, `NDSi (XL)`, `2DS (XL)`, `3DS (XL)`, `New 2DS (XL)`, `New 3DS (XL)`
+- `Reflective`: TODO
+- `Transflective`: `GBA` (to verify)
+
+## Measurements tools
+
+Depending on the display type, you must use the appropriate meters to get proper and accurate measurements. Below there is a summary table of the tools you can use depending on the use-case:
+
+| Meter  | Emissive | Reflective | Transflective |
+| ------------- | :-------------: | :-------------: | :-------------: |
+| Colorimeter        | ✅  | ❓  | ❓ |
+| Spectroradiometer  | ✅  | ❓  | ❓ |
+| Spectrophotometer  | ❌  | ✅  | ❓ |
+
+> [!NOTE]
+> Spectroradiometer provides better measurements compared to a colorimeter.
+
+
 
 # Emissive display (only)
 
@@ -24,11 +47,12 @@
 > [!IMPORTANT]
 > If the screen is not original any kind of measurements are invalid.
 
-In order to replicate the screen colorspace the following data must measured:
+In order to replicate the screen colorspace the following data must be measured:
 - chromaticity coordinates of the three primaries (R, G, B)
 - chromaticity coordinate of the white point (W)
 - gamma curve of the three channels (R, G, B)
-- maximum luminance of display (W)
+- maximum luminance of display (White)
+- minimum luminance of the display (Black)
 
 In order to preserve all the possible info, both top and bottom screen must be measured if present (e.g. NDS consoles). In some cases the top and bottom displays are the same (e.g. NDS Lite), the only difference is the touch screen layer which tends to degrade the image quality. If you don't want to measure all the screens prefer the one without the touch screen which provides the best image quality. 
 
@@ -38,9 +62,10 @@ In order to preserve all the possible info, both top and bottom screen must be m
 ## Measurement methodology
 
 In order to achieve reproducible and accurate measurements you must:
-- wait at least 30 minutes with the screen turned on before measuring to let the screen to warm-up.
+- wait at least 30 minutes with the screen turned on before measuring to warm-up the screen.
 - when measuring a color prefer displaying a full screen color patch on screen to avoid other color interference.
 - if you are using a colorimeter, the meter must be in contact with the screen to avoid light leakage or external lights infiltrations.
+- if you can, remove any kind of screen protector and the screen digitizer (i.e. touchscreen) which can alter the measurements.
 - the display must be set to the maximum screen luminance possible. On some consoles (e.g. PSP) you need to plug the charger in to achieve the maximum possible luminance.
 - external light sources can alter the results. To avoid this you must be in perfectly dark environment (no sunlight, no light bulb turned on, pc screen turned off). If there are multiple screens to measure (e.g. NDS) try to cover the display you are not measuring.
 
@@ -48,7 +73,7 @@ In order to achieve reproducible and accurate measurements you must:
 
 In order to validate the results you must:
 - calibrate your display. If not possible use a display known to have a good default factory calibration. Any kind of display which doesn't fit this requirement (a lot of displays unfortunately) should not be used to make judgements or adjustments on the measurements.
-- the monitor should have all the image post processing effect settings turned off (e.g. dynamic contrast). These can alter the colors depending on the image displayed on screen.
+- disable all the monitor image post processing settings (e.g. dynamic contrast). These can alter the colors.
 
 > [!WARNING]
 > The same console can have different LCD manufacturers which can lead to different results (e.g. NDS Lite has LCD screens coming from Hitachi and Sharp (1)(2)).
