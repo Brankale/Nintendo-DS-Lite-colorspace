@@ -1,4 +1,38 @@
-## Primaries chromaticity coordinates:
+# Report
+
+## General
+
+- `author`: Pica200
+- `date`: 2024/12/21
+- `handheld`: 3DS
+- **screen**
+    - `type`: emissive
+    - `position`: top
+    - `quantization`: 8 bits
+    - `manufacturer`: unknown
+- **meters**
+    - `name`: Calibrite Display Plus HL
+    - `type`: colorimeter
+- **measurements**
+   - `software name`: HCFR
+   - `software version`: 3.5.1.4
+   - `screen warm-up`: yes
+   - `no external light sources`: yes
+   - `charger`: N.D.
+   - `no screen protector / touchscreen`: N.D.
+
+## Notes
+
+> [!WARNING]
+> Max luminance has been manually set to 80cd/m2.
+
+- original post link: https://forums.libretro.com/t/real-gba-and-ds-phat-colors/1540/269
+- original files link: https://www.dropbox.com/scl/fi/o6dryycdkjlo3rgbow72q/3DS_LCD_measurements.7z?rlkey=a4vfz3ueel8e5nhu5r7x7i99b&st=ovuoter1&dl=1
+- HCFR test pattern code: https://gist.github.com/profi200/e1835d33653cdd7664e4bd9a6db52c1b
+
+## Measurements data
+
+### Primaries chromaticity coordinates:
 
 | CIE xyY | R | G | B | W | B |
 | --- | --- | ---| --- | --- | --- |
@@ -6,10 +40,9 @@
 | y	| 0,3539	| 0,6145| 0,0885	|	0,3237 | 0,3093 |	
 | Y	| 17,766| 53,364	| 10,073	|	80,788 | 0,087 | 
 
-> [!WARNING]
-> white point luminance Y has been manually set to 80cd/m2. This is not the actual max luminance.
 
-## EOTF (i.e. gamma curve)
+
+### EOTF (i.e. gamma curve)
 
 | % | γR | γG | γB |
 | --- | --- | ---| --- |
