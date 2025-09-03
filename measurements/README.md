@@ -31,7 +31,7 @@ Handheld LCD screens present several challenges:
 - color variations depending on the **viewing angle** (especially on TN panels).
 - variation in **color tint** caused by the ‘screen lottery’ phenomenon in certain handhelds (e.g. the 3DS), where manufacturing tolerances cause units with the same nominal display model to exhibit distinct color characteristics.
 - different **screen manufacturers**: some handhelds have different screen manufacturers (e.g. NDS Lite has LCD screens coming from Hitachi and Sharp (1)(2)) which can cause color variations across different units of the same handheld. 
-- **screen protectors and touchscreens** (or screen digitizers) can affect color accuracy, especially if they are old and have been exposed to sunlight, which can degrade the plastic and cause a yellowish tint.
+- **screen protectors and touchscreens** (aka screen digitizers) can affect color accuracy, especially if they are old and have been exposed to sunlight, which can degrade the plastic and cause a yellowish tint.
 
 The goal is to **measure the best possible scenario**, removing all the factors which can degrade image quality.
 
