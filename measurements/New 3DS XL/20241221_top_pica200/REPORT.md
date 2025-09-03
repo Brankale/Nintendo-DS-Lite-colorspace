@@ -4,7 +4,7 @@
 
 - `author`: Pica200
 - `date`: 2024/12/21
-- `handheld`: 3DS
+- `handheld`: New 3DS XL
 - **screen**
     - `type`: emissive
     - `position`: top
@@ -23,6 +23,8 @@
 
 ## Notes
 
+The screen is an IPS panel.
+
 > [!WARNING]
 > Max luminance has been manually set to 80cd/m2.
 
@@ -36,10 +38,9 @@
 
 | CIE xyY | R | G | B | W | B |
 | --- | --- | ---| --- | --- | --- |
-| x	| 0,6006	| 0,3211	| 0,1461	| 0,2977 |0,2777 |
-| y	| 0,3539	| 0,6145| 0,0885	|	0,3237 | 0,3093 |	
-| Y	| 17,766| 53,364	| 10,073	|	80,788 | 0,087 | 
-
+| x	| 0,6006 | 0,3211 | 0,1461 | 0,2977 | 0,2777 |
+| y	| 0,3539 | 0,6145 | 0,0885 | 0,3237 | 0,3093 |	
+| Y	| 17,766 | 53,364 | 10,073 | 80,788 | 0,0870 | 
 
 
 ### EOTF (i.e. gamma curve)
