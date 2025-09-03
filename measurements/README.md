@@ -1,16 +1,3 @@
-## General Info
-
-- `author`: the author name of the measurements.
-- `date`: the date of the measurement. This is important because screen colors tends to degrade over time and with use. Recording the measurement date helps track screen aging and maintain accuracy.
-- `meter`: name of the meter used.
-- `meter type`: [colorimeter, spectroradiometer, spectrophotometer].
-- `console`: the console measured.
-- `measured screen manufacturer`: the manufacturer of the measured screen.
-- `measurement software`: the name of the software used to make the measurements.
-- `measurement software version`: the version of the software used to make the measurements.
-- `quantization`: the bit depth per color channel (e.g. NDS Lite has 6 bits per channel = 262.144 colors)
-
-
 # Displays types
 
 - `Emissive`: the display **emits its own light** (no external illumination needed).
@@ -85,6 +72,21 @@ In order to replicate the screen colorspace the following data must be measured:
 - minimum luminance of the display (Black)
 
 In order to preserve all the possible info, both top and bottom screen must be measured if present (e.g. NDS consoles). In some cases the top and bottom displays are the same (e.g. NDS Lite), the only difference is the touch screen layer which tend to degrade the image quality. If you don't want to measure all the screens prefer the one without the touch screen which provides the best image quality. 
+
+## Measurements report (template)
+
+- `author`: the author name of the measurements.
+- `date`: the date of the measurement. This is important because screen colors tends to degrade over time and with use. Recording the measurement date helps track screen aging and maintain accuracy.
+- `meter`: name of the meter used.
+- `meter type`: colorimeter / spectroradiometer / spectrophotometer
+- `handheld`: the measured handheld.
+- `screen type`: emissive / reflective / transflective
+- `screen position`: top / bottom (only if multiple screens are present).
+- `screen quantization`: the bit depth per color channel (e.g. NDS Lite has 6 bits per channel = 262.144 colors)
+- `screen manufacturer`: the manufacturer of the measured screen.
+- `measurement software`: the name of the software used to make the measurements.
+- `measurement software version`: the version of the software used to make the measurements.
+- `measurement notes`: how the measurements were done.
 
 # **Measurements Validation**
 
