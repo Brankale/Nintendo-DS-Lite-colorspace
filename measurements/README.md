@@ -38,11 +38,31 @@ Depending on the display type, you must use the appropriate meters to get proper
 > [!NOTE]
 > Spectroradiometer provides better measurements compared to a colorimeter.
 
+# Do the measurements
 
+## Introduction
 
-# Emissive display (only)
+Handheld LCD screen present a lot of challanges:
+- color variations depending on the viewing angle (especially on TN panels)
+- different color tint caused by the so-called ‘screen lottery’ phenomenon in certain handhelds (e.g. the 3DS), where manufacturing tolerances cause units with the same nominal display model to exhibit distinct color characteristics.
+- different screen manufacturers: some handhelds have different screen manufacturers (e.g. NDS Lite has LCD screens coming from Hitachi and Sharp (1)(2)) which can cause color variations across different units of the same handheld. 
+- screen protectors and touchscreens (or screen digitizers) can affect color accuracy, especially if they are old and have been exposed to sunlight, which can degrade the plastic and cause a yellowish tint.
 
-## What to measure
+The goal is to measure the best possible scenario, removing all the factors which can degrade image quality.
+
+## Emissive display measurements guide
+
+### Environment setup
+
+In order to achieve reproducible and accurate measurements you must:
+- Let the screen warm-up. This can take from 5 to 10 minutes, up to 30 minutes depending on the screen type. Doing measurements too early can results in non-reproducible measurements and does not provide the actual screen visual experience. In general, start measuring only when measurements are stable.
+- Remove any kind of external light source which can alter the measurements (e.g. no sunlight, no light bulb turned on, pc screen turned off). If there are multiple screens to measure (e.g. NDS family) cover the display you are not measuring to avoid light leakage.
+- Some handhelds (e.g. PSP-1000) requires the charger to be plugged-in to reach the maximum screen luminance.
+- use full-screen color patches. This requires either homebrew software on a modded handheld, hardware modifications, or the use of special cartridges.
+- (optional, but appreciated) remove screen protectors and screen digitizer (i.e. touchscreen). These are unnecessary "screen layers" that can alter the measurements.
+- (TODO: to revise) if you are using a colorimeter, the meter must be in contact with the screen to avoid light leakage or external lights infiltrations.
+
+### What to measure
 
 > [!IMPORTANT]
 > If the screen is not original any kind of measurements are invalid.
@@ -56,27 +76,11 @@ In order to replicate the screen colorspace the following data must be measured:
 
 In order to preserve all the possible info, both top and bottom screen must be measured if present (e.g. NDS consoles). In some cases the top and bottom displays are the same (e.g. NDS Lite), the only difference is the touch screen layer which tends to degrade the image quality. If you don't want to measure all the screens prefer the one without the touch screen which provides the best image quality. 
 
-> [!WARNING]
-> The same console can have different LCD manufacturers which can lead to different results (e.g. NDS Lite has LCD screens coming from Hitachi and Sharp (1)(2)). If you have multiple units of the same console with different colors this is probably one of the causes.
-
-## Measurement methodology
-
-In order to achieve reproducible and accurate measurements you must:
-- wait at least 30 minutes with the screen turned on before measuring to warm-up the screen.
-- when measuring a color prefer displaying a full screen color patch on screen to avoid other color interference.
-- if you are using a colorimeter, the meter must be in contact with the screen to avoid light leakage or external lights infiltrations.
-- if you can, remove any kind of screen protector and the screen digitizer (i.e. touchscreen) which can alter the measurements.
-- the display must be set to the maximum screen luminance possible. On some consoles (e.g. PSP) you need to plug the charger in to achieve the maximum possible luminance.
-- external light sources can alter the results. To avoid this you must be in perfectly dark environment (no sunlight, no light bulb turned on, pc screen turned off). If there are multiple screens to measure (e.g. NDS) try to cover the display you are not measuring.
-
-## Measurements validation
+# Measurements validation
 
 In order to validate the results you must:
 - calibrate your display. If not possible use a display known to have a good default factory calibration. Any kind of display which doesn't fit this requirement (a lot of displays unfortunately) should not be used to make judgements or adjustments on the measurements.
 - disable all the monitor image post processing settings (e.g. dynamic contrast). These can alter the colors.
-
-> [!WARNING]
-> The same console can have different LCD manufacturers which can lead to different results (e.g. NDS Lite has LCD screens coming from Hitachi and Sharp (1)(2)).
 
 # External links
 
