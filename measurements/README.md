@@ -18,13 +18,10 @@
 Depending on the display type, you must use the appropriate meter to ensure accurate measurements. Here is a summary table:
 
 | Meter  | Emissive | Reflective | Transflective |
-| ------------- | :-------------: | :-------------: | :-------------: |
-| Colorimeter        | ✅ | ❓ | ❓ |
-| Spectroradiometer  | ✅ | ❓ | ❓ |
+| ------------- | :-------------: | :-------------: | :-------------: | 
+| Colorimeter        | ✅ (good accuracy) | ❓ | ❓ |
+| Spectroradiometer  | ✅ (highest accuracy) | ❓ | ❓ |
 | Spectrophotometer  | ❌ | ✅ | ❓ |
-
-> [!NOTE]
-> Spectroradiometer provides better measurements compared to a colorimeter.
 
 # Do the measurements
 
@@ -80,19 +77,22 @@ In order to preserve all the possible info, both top and bottom screen must be m
 
 - `author`: the author name of the measurements.
 - `date`: the date of the measurement. This is important because screen colors tends to degrade over time and with use. Recording the measurement date helps track screen aging and maintain accuracy.
-- `meter`: name of the meter used.
-- `meter type`: colorimeter / spectroradiometer / spectrophotometer
 - `handheld`: the measured handheld.
-- `screen type`: emissive / reflective / transflective
-- `screen position`: top / bottom (only if multiple screens are present).
-- `screen quantization`: the bit depth per color channel (e.g. NDS Lite has 6 bits per channel = 262.144 colors)
-- `screen manufacturer`: the manufacturer name of the measured screen.
-- `measurement software`: the software name used to make the measurements.
-- `measurement software version`: the version of the software used to make the measurements.
-- `measurement screen warm-up`: yes / no
-- `measurement no external light sources`: yes / no
-- `measurement charger`: yes / no
-- `measurement no screen protector / touchscreen`: yes / no
+- **screen**
+    - `type`: emissive / reflective / transflective
+    - `position`: top / bottom (only if multiple screens are present).
+    - `quantization`: the bit depth per color channel (e.g. NDS Lite has 6 bits per channel = 262.144 colors)
+    - `manufacturer`: the manufacturer name of the measured screen.
+- **meters**
+    - `name`: name of the meter used.
+    - `type`: colorimeter / spectroradiometer / spectrophotometer
+- **measurements**
+   - `software name`: the software name used to make the measurements.
+   - `software version`: the version of the software used to make the measurements.
+   - `screen warm-up`: yes / no
+   - `no external light sources`: yes / no
+   - `charger`: yes / no
+   - `no screen protector / touchscreen`: yes / no
 - `notes`: any relevant info about the screen, the measurements etc.
 
 # **Measurements Validation**
