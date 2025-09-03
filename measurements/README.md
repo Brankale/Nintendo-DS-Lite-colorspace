@@ -86,10 +86,14 @@ In order to preserve all the possible info, both top and bottom screen must be m
 - `screen type`: emissive / reflective / transflective
 - `screen position`: top / bottom (only if multiple screens are present).
 - `screen quantization`: the bit depth per color channel (e.g. NDS Lite has 6 bits per channel = 262.144 colors)
-- `screen manufacturer`: the manufacturer of the measured screen.
-- `measurement software`: the name of the software used to make the measurements.
+- `screen manufacturer`: the manufacturer name of the measured screen.
+- `measurement software`: the software name used to make the measurements.
 - `measurement software version`: the version of the software used to make the measurements.
-- `measurement notes`: how the measurements were done.
+- `measurement screen warm-up`: yes / no
+- `measurement no external light sources`: yes / no
+- `measurement charger`: yes / no
+- `measurement no screen protector / touchscreen`: yes / no
+- `notes`: any relevant info about the screen, the measurements etc.
 
 # **Measurements Validation**
 
