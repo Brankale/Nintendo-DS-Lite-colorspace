@@ -43,24 +43,36 @@ Depending on the display type, you must use the appropriate meters to get proper
 ## Introduction
 
 Handheld LCD screen present a lot of challanges:
-- color variations depending on the viewing angle (especially on TN panels)
-- different color tint caused by the so-called ‘screen lottery’ phenomenon in certain handhelds (e.g. the 3DS), where manufacturing tolerances cause units with the same nominal display model to exhibit distinct color characteristics.
-- different screen manufacturers: some handhelds have different screen manufacturers (e.g. NDS Lite has LCD screens coming from Hitachi and Sharp (1)(2)) which can cause color variations across different units of the same handheld. 
-- screen protectors and touchscreens (or screen digitizers) can affect color accuracy, especially if they are old and have been exposed to sunlight, which can degrade the plastic and cause a yellowish tint.
+- color variations depending on the **viewing angle** (especially on TN panels).
+- different **color tint** caused by the so-called ‘screen lottery’ phenomenon in certain handhelds (e.g. the 3DS), where manufacturing tolerances cause units with the same nominal display model to exhibit distinct color characteristics.
+- different **screen manufacturers**: some handhelds have different screen manufacturers (e.g. NDS Lite has LCD screens coming from Hitachi and Sharp (1)(2)) which can cause color variations across different units of the same handheld. 
+- **screen protectors and touchscreens** (or screen digitizers) can affect color accuracy, especially if they are old and have been exposed to sunlight, which can degrade the plastic and cause a yellowish tint.
 
-The goal is to measure the best possible scenario, removing all the factors which can degrade image quality.
+The goal is to **measure the best possible scenario**, removing all the factors which can degrade image quality.
 
 ## Emissive display measurements guide
 
 ### Environment setup
 
-In order to achieve reproducible and accurate measurements you must:
-- Let the screen warm-up. This can take from 5 to 10 minutes, up to 30 minutes depending on the screen type. Doing measurements too early can results in non-reproducible measurements and does not provide the actual screen visual experience. In general, start measuring only when measurements are stable.
-- Remove any kind of external light source which can alter the measurements (e.g. no sunlight, no light bulb turned on, pc screen turned off). If there are multiple screens to measure (e.g. NDS family) cover the display you are not measuring to avoid light leakage.
-- Some handhelds (e.g. PSP-1000) requires the charger to be plugged-in to reach the maximum screen luminance.
-- use full-screen color patches. This requires either homebrew software on a modded handheld, hardware modifications, or the use of special cartridges.
-- (optional, but appreciated) remove screen protectors and screen digitizer (i.e. touchscreen). These are unnecessary "screen layers" that can alter the measurements.
-- (TODO: to revise) if you are using a colorimeter, the meter must be in contact with the screen to avoid light leakage or external lights infiltrations.
+To achieve reproducible and accurate measurements, you must:
+
+* **Let the screen warm up**:
+  * Warming can take 5–10 minutes, or up to 30 minutes depending on the screen type.
+  * Measuring too early can produce non-reproducible results and does not reflect the true visual experience.
+  * Begin measurements only once values have stabilized.
+* **Remove external light sources**:
+  * Avoid sunlight, lamps, or other screens that can affect measurements.
+  * For multiple screens (e.g., NDS family), cover the screens not being measured to prevent light leakage.
+* **Plug in the charger for certain handhelds**:
+  * Some devices (e.g., PSP-1000) require charging to reach maximum screen luminance.
+* **Use full-screen color patches**:
+  * Requires homebrew software on modded handhelds, hardware modifications, or special cartridges.
+* **Optionally remove screen protectors or digitizers**:
+  * Extra layers (e.g., touchscreen or protective films) can alter measurements, so removing them improves accuracy.
+* **Colorimeter usage**:
+  * **With screen protector**: Place the sensor in contact with the protector to keep it perpendicular, reduce light leakage, and minimize external light influence.
+  * **Without screen protector**: Place the sensor directly on the screen but avoid pressing too hard to prevent distortion or Newton rings. Alternatively, position the meter very close to the screen, ensuring perpendicular alignment—small viewing angle changes can significantly affect color and brightness on TN panels.
+
 
 ### What to measure
 
