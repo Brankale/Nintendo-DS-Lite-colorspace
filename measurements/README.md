@@ -19,9 +19,9 @@
 
 ## Handhelds display type
 
-- `Emissive`: `GBA SP`, `NDS Phat`, `NDS Lite`, `NDSi (XL)`, `2DS (XL)`, `3DS (XL)`, `New 2DS (XL)`, `New 3DS (XL)`
+- `Emissive`: `NDS Phat`, `NDS Lite`, `NDSi (XL)`, `2DS (XL)`, `3DS (XL)`, `New 2DS (XL)`, `New 3DS (XL)`
 - `Reflective`: TODO
-- `Transflective`: `GBA` (to verify)
+- `Transflective`: TODO
 
 ## Measurements tools
 
