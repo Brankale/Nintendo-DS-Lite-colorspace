@@ -4,9 +4,12 @@
 - `Reflective`: the display **does not emit light**; it reflects ambient light. Pixels modulate reflection, rather than emitting light.
 - `Transflective`: **hybrid** of emissive and reflective. A backlight is present, but the display can also use ambient light (via a partially reflective layer).
 
-## Handhelds display type
+## Known Handhelds display type
 
-- `Emissive`: `NDS Phat`, `NDS Lite`, `NDSi (XL)`, `2DS (XL)`, `3DS (XL)`, `New 2DS (XL)`, `New 3DS (XL)`
+> [!NOTE]
+> The following lists are not exhaustive.
+
+- `Emissive`: `NDS Lite`, `NDSi (XL)`, `2DS (XL)`, `3DS (XL)`, `New 2DS (XL)`, `New 3DS (XL)`
 - `Reflective`: TODO
 - `Transflective`: TODO
 
