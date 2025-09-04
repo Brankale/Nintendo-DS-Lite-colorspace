@@ -73,7 +73,7 @@ To accurately characterize a handheld screen’s colorspace, you should record t
 * **Chromaticity coordinates of the white point (W)**.
 * **Individual Gamma response of the three channels (R, G, B)**:
   * Use stepped ramps with increments of **10% or smaller** for greater accuracy.
-  * Include additional fine measurements near **white (96–99%)** and **black (1–4%)** levels, as these regions are the most prone to errors.
+  * Include additional fine measurements near **white (96%–99%)** and **black (1%–4%)** levels, as these regions are the most prone to errors.
 * **Maximum luminance (full white)** of the display.
 * **Minimum luminance (full black)** of the display.
 
@@ -92,7 +92,7 @@ R, G and B channels chromaticity coordinates (CIE xyY coordinates):
 White chromaticity coordinates (CIE xyY coordinates) + white/black luminance:
 <img width="640" height="360" alt="Screenshot From 2025-09-03 16-44-50" src="https://github.com/user-attachments/assets/1f97ca9c-6f21-4f67-966b-7b58643b0e8f" />
 
-RGB gamma curves (10%-90%) + near black & near white gamma:
+Individual Red, Green and Blue gamma curves (10%-90%) + near black (1%-4%) & near white gamma (96%-99%):
 <img width="640" height="360" alt="Screenshot From 2025-09-03 16-41-30" src="https://github.com/user-attachments/assets/0da55b1e-0ed9-4180-984f-b7dba6b7bda5" />
 <img width="640" height="360" alt="Screenshot From 2025-09-03 16-42-56" src="https://github.com/user-attachments/assets/a7dbbe27-1221-4b59-b534-2eef6343097d" />
 <img width="640" height="360" alt="Screenshot From 2025-09-03 16-43-21" src="https://github.com/user-attachments/assets/e3d8ee77-480a-4828-acb9-23a16e1e4623" />
