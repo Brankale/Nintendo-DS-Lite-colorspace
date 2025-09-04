@@ -71,7 +71,7 @@ To achieve reproducible and accurate measurements, you must:
 To accurately characterize a handheld screen’s colorspace, you should record the following data:
 * **Chromaticity coordinates** of the three primaries (R, G, B).
 * **Chromaticity coordinates of the white point (W)**.
-* **Gamma response of the three channels (R, G, B)**:
+* **Individual Gamma response of the three channels (R, G, B)**:
   * Use stepped ramps with increments of **10% or smaller** for greater accuracy.
   * Include additional fine measurements near **white (96–99%)** and **black (1–4%)** levels, as these regions are the most prone to errors.
 * **Maximum luminance (full white)** of the display.
@@ -80,6 +80,9 @@ To accurately characterize a handheld screen’s colorspace, you should record t
 If the handheld has multiple screens (e.g., Nintendo DS family), measure **both top and bottom panels**.
 * In some systems (e.g., NDS Lite), the panels are identical, but the bottom screen includes a **touch layer** that can slightly degrade image quality.
 * If you want to reduce workload, prioritize measuring the **non-touch screen**, as it represents the display’s best possible performance.
+
+> [!IMPORTANT]
+> Using only the greyscale gamma curve is not enough to get accurate results. To make things clear, think the greyscale gamma as the mean between the red gamma (γR), the green gamma (γG) and the blue gamma (γB) (this is an oversemplification, this is not actually a mean). You can have a greyscale gamma of 2.2 which seems great but this can be the results of both (γR = 2.2, γG = 2.2, γB = 2.2) and (γR = 2.9, γG = 2.2, γB = 1.5) which leads to completely different colors.
 
 #### Example (using HCFR software)
 
