@@ -391,5 +391,10 @@ $`
 1. https://www.audioholics.com/news/nintendo-ds-price-fixing
 2. https://www.wired.com/2008/02/sharp-hitachi-s
 3. https://www.youtube.com/@hdtvtest channel
+4. CIELUV: https://en.wikipedia.org/wiki/CIELUV
+5. LMS colorspace and chromatic adaptation matrices (i.e. Bradford, CIECAT02, CIECAT16):
+    - https://en.wikipedia.org/wiki/LMS_color_space
+    - https://en.wikipedia.org/wiki/CIECAM02
+6. Colorspace conversions: http://brucelindbloom.com/index.html
 
   
