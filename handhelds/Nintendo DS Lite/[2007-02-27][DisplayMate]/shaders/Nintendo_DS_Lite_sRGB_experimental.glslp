@@ -1,5 +1,5 @@
 shaders = 1
-shader0 = sRGB_D65.glsl
+shader0 = Nintendo_DS_Lite_sRGB_experimental.glsl
 filter_linear0 = false
 scale_type0 = source
 scale0 = 1.0
