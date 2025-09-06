@@ -13,15 +13,6 @@
 - `Reflective`: the display **does not emit light**; it reflects ambient light. Pixels modulate reflection, rather than emitting light.
 - `Transflective`: **hybrid** of emissive and reflective. A backlight is present, but the display can also use ambient light (via a partially reflective layer).
 
-## Known Handhelds display type
-
-> [!NOTE]
-> The following lists are not exhaustive.
-
-- `Emissive`: `NDS Lite`, `NDSi (XL)`, `2DS (XL)`, `3DS (XL)`, `New 2DS (XL)`, `New 3DS (XL)`
-- `Reflective`: TODO
-- `Transflective`: TODO
-
 ## Measurements tools
 
 Depending on the display type, you must use the appropriate meter to ensure accurate measurements. Here is a summary table:
@@ -33,6 +24,20 @@ Depending on the display type, you must use the appropriate meter to ensure accu
 | Spectrophotometer  | ⚠️ not recommended (*) | ✅ | ❓ |
 
 (*) A spectrophotometer primarily measures reflected light from surfaces. Some models have an “emissive mode,” but they’re generally slower, less sensitive at low light, and not ideal for bright HDR peaks or very dark near-black, common in emissive displays.
+
+## Known Handhelds display type
+
+> [!NOTE]
+> The following lists are not exhaustive.
+
+- `Emissive`:
+    - Game Boy family: `Game Boy Light`, `Game Boy Micro`, `Game Boy Advance SP AGS-001` (frontlit on), `Game Boy Advance SP AGS-101` ,
+    - DS family: `NDS Phat`, `NDS Lite`, `NDSi (XL)`, `2DS (XL)`, `3DS (XL)`, `New 2DS (XL)`, `New 3DS (XL)`
+    - `Wii U`
+    - Switch family: `Switch Mini`, `Switch`, `Switch OLED`, `Switch 2` 
+- `Reflective`:
+    - Game Boy family: `Game Boy`, `Game Boy Pocket`, `Game Boy Color`, `Game Boy Advance`, `Game Boy Advance SP AGS-001` (frontlit off)
+- `Transflective`: 
 
 # Do the measurements
 
