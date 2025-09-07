@@ -36,7 +36,7 @@ Depending on the display type, you must use the appropriate meter to ensure accu
 | `Game Boy Pocket` |  Reflective | 🔴 | Unknown | |
 | `Game Boy Light` |  Emissive | 🔴 | Unknown | |
 | `Game Boy Color` |  Reflective | 🔴 | Unknown | |
-| `Game Boy Micro` |  Emissive | 🔴 | Unknown | |
+| `Game Boy Micro` |  Emissive | 🔵 | Unknown | - unknown manufacturer |
 | `Game Boy Advance` |  Reflective | 🔴 | Unknown | | 
 | `Game Boy Advance SP AGS-001` |  Emissive (frontlit on),<br> Reflective (frontlit off) | 🔴 | Unknown | |
 | `Game Boy Advance SP AGS-101` |  Emissive | 🔵 | Unknown | - unknown manufacturer |
