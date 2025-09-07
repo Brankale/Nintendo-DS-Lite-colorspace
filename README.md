@@ -25,19 +25,43 @@ Depending on the display type, you must use the appropriate meter to ensure accu
 
 (*) A spectrophotometer primarily measures reflected light from surfaces. Some models have an “emissive mode,” but they’re generally slower, less sensitive at low light, and not ideal for bright HDR peaks or very dark near-black, common in emissive displays.
 
-## Known Handhelds display type
+# Handhelds status report
 
 > [!NOTE]
-> The following lists are not exhaustive.
+> The table is not exhaustive.
 
-- `Emissive`:
-    - Game Boy family: `Game Boy Light`, `Game Boy Micro`, `Game Boy Advance SP AGS-001` (frontlit on), `Game Boy Advance SP AGS-101` ,
-    - DS family: `NDS Phat`, `NDS Lite`, `NDSi (XL)`, `2DS (XL)`, `3DS (XL)`, `New 2DS (XL)`, `New 3DS (XL)`
-    - `Wii U`
-    - Switch family: `Switch Mini`, `Switch`, `Switch OLED`, `Switch 2` 
-- `Reflective`:
-    - Game Boy family: `Game Boy`, `Game Boy Pocket`, `Game Boy Color`, `Game Boy Advance`, `Game Boy Advance SP AGS-001` (frontlit off)
-- `Transflective`: 
+| Handheld  | Display Type | Display Data Collected? | Known Manufacturers | Notes |
+| ------------- | :-------------: | :-------------: |  :-------------: | :------------- |
+| `Game Boy` |  Reflective | 🔴 | Unknown | |
+| `Game Boy Pocket` |  Reflective | 🔴 | Unknown | |
+| `Game Boy Light` |  Emissive | 🔴 | Unknown | |
+| `Game Boy Color` |  Reflective | 🔴 | Unknown | |
+| `Game Boy Micro` |  Emissive | 🔴 | Unknown | |
+| `Game Boy Advance` |  Reflective | 🔴 | Unknown | | 
+| `Game Boy Advance SP AGS-001` |  Emissive (frontlit on),<br> Reflective (frontlit off) | 🔴 | Unknown | |
+| `Game Boy Advance SP AGS-101` |  Emissive | 🔵 | Unknown | - unknown manufacturer |
+| `NDS Phat` |  Emissive | 🔵 | Unknown | - unknown manufacturer |
+| `NDS Lite` |  Emissive | 🟡 | (2) Hitachi, Sharp | - unknown manufacturer<br>- greyscale gamma differs between reports (different manufacturers?) |
+| `NDSi` |  Emissive | 🔴 | Unknown | |
+| `NDSi XL` |  Emissive | 🔴 | Unknown |  |
+| `3DS` |  Emissive | 🔵 | Unknown | - unknown manufacturer |
+| `3DS XL` |  Emissive | 🔴 | Unknown |  |
+| `2DS` |  Emissive | 🔴 | Unknown |  |
+| `New 3DS` |  Emissive | 🔴 | Unknown | |
+| `New 3DS XL` |  Emissive | 🟡 <br>[other info here - Erica Griffin](https://www.youtube.com/watch?v=QvDdaVZ7MCU) | Unknown | - only IPS top screen analyzed<br>- screen lottery<br>- unknown manufacturer |
+| `New 2DS` |  Emissive | 🔴 | Unknown |  |
+| `New 2DS XL` |  Emissive | 🔴 | Unknown | |
+| `Wii U` |  Emissive | 🔴 | Unknown | |
+| `Switch` |  Emissive | 🔴 <br>[info here - Erica Griffin](https://www.youtube.com/watch?v=QvDdaVZ7MCU) | Unknown | |
+| `Switch Mini` |  Emissive | 🔴 | Unknown | |
+| `Switch OLED` |  Emissive | 🔴 <br>[info here - GamingTech](https://www.youtube.com/watch?v=mYnUdYoh_xc) | Unknown | |
+| `Switch 2` |  Emissive | 🔴 | Unknown | |
+
+Legend:
+- 🔴: No data available or not yet analyzed
+- 🟡: Partial data available; some information missing  
+- 🔵: Data available
+- 🟢: Data available and verified by two or more screen reports
 
 # Do the measurements
 
