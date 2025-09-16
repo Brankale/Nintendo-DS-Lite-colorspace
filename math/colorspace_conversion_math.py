@@ -25,8 +25,8 @@ if __name__ == "__main__":
     print(target_colourspace.matrix_RGB_to_XYZ)
 
     cat_mtx = colour.adaptation.matrix_chromatic_adaptation_VonKries(
-        XYZ_w = colour.xy_to_XYZ(TARGET_W_CHROMATICITY),
-        XYZ_wr = colour.xy_to_XYZ(REFERENCE_W_CHROMATICITY),
+        XYZ_w = colour.xy_to_XYZ(REFERENCE_W_CHROMATICITY),
+        XYZ_wr = colour.xy_to_XYZ(TARGET_W_CHROMATICITY),
         transform = "Bradford"
     )
     print("\nChromatic Adaptation Transform Matrix (Bradford):")
