@@ -30,7 +30,7 @@ Depending on the display type, you must use the appropriate meter to ensure accu
 > [!NOTE]
 > The table is not exhaustive.
 
-| Handheld  | Display Type | Display Data Collected? | Known Manufacturers | Notes |
+| Handheld  | Display Type | Display Data Collected? | Known Manufacturers | Measurements Notes |
 | ------------- | :-------------: | :-------------: |  :-------------: | :------------- |
 | `Game Boy` |  Reflective | 🔴 | Unknown | |
 | `Game Boy Pocket` |  Reflective | 🔴 | Unknown | |
