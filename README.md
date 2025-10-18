@@ -279,18 +279,11 @@ $`
 `$
 
 > [!NOTE]
-> Given CIELUV coordinates, CIE xyY coordinates are:
->
-> $` x = \frac{9u'}{6u'-16v'+12} `$ 
-> 
-> $` y = \frac{4v'}{6u'-16v'+12} `$
-
-> [!NOTE]
 > Given CIE xyY coordinates, CIE XYZ coordinates are:
 > 
-> $` X = \frac{x}{y}Y = \frac{9u'}{4v'}Y `$
+> $` X = \frac{x}{y}Y `$
 > 
-> $` Z = \frac{1-x-y}{y}Y = \frac{12-3u'-20v'}{4v'}Y `$
+> $` Z = \frac{1-x-y}{y}Y `$
 
 ## Calculate the Chromatic Adaptation Transform (CAT) Matrix
 
