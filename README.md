@@ -4,9 +4,6 @@
 > [!WARNING]
 > I'm not a color scientist or expert. This guide may contain inaccuracies or misleading information. Please take it with a grain of salt. If you notice any issues, feel free to open an issue.
 
-> [!WARNING]
-> Be aware that, at the moment, handheld shaders may contain errors due to floating-point rounding errors (especially in the computed colorspace matrices), suboptimal algorithms, and similar issues.
-
 # Index
 
 - [Displays types](https://github.com/Brankale/Handheld-Color-Space-Project/blob/main/README.md#displays-types)
