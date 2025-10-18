@@ -85,9 +85,7 @@ The goal is to **measure the best possible scenario**, removing all the factors 
 To achieve reproducible and accurate measurements, you must:
 
 * **Let the screen warm up**:
-  * Warming can take 5–10 minutes, or up to 30 minutes depending on the screen type.
-  * Measuring too early can cause non-reproducible results and does not reflect the true visual experience.
-  * Wait until luminance and chromaticity stabilize and record when stable.
+  * Measuring too early can produce non-reproducible results and will not reflect the true visual experience. Leave the screen on and wait for the luminance and chromaticity to stabilize before recording the measurements. Depending on the screen type, this process can take anywhere from 5 to 30 minutes.
 * **Remove external light sources**:
   * Avoid sunlight, lamps, and any other external light sources. Even small reflections or stray light can affect measurement accuracy.
   * For multiple screens (e.g., NDS family), cover the screens not being measured to prevent light leakage.
