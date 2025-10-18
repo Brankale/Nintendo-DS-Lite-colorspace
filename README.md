@@ -14,7 +14,10 @@
    - [Measurements guide for emissive displays](https://github.com/Brankale/Handheld-Color-Space-Project/blob/main/README.md#measurements-guide-for-emissive-displays)
    - [Measurements report (template)](https://github.com/Brankale/Handheld-Color-Space-Project/blob/main/README.md#measurements-report-template)
    - [Measurements Validation](https://github.com/Brankale/Handheld-Color-Space-Project/blob/main/README.md#measurements-validation)
- - [Colorspace conversion Math](https://github.com/Brankale/Handheld-Color-Space-Project/blob/main/README.md#colorspace-conversion-math)
+- [Retroarch Shaders](https://github.com/Brankale/Handheld-Color-Space-Project/edit/main/README.md#retroarch-shaders)
+   -  [Shader parameters](https://github.com/Brankale/Handheld-Color-Space-Project/edit/main/README.md#shader-parameters)
+      -  [Chromatic Adaptation](https://github.com/Brankale/Handheld-Color-Space-Project/edit/main/README.md#chromatic-adaptation)
+- [Colorspace conversion Math](https://github.com/Brankale/Handheld-Color-Space-Project/blob/main/README.md#colorspace-conversion-math)
    - [Calculate RGB => CIE XYZ conversion matrix](https://github.com/Brankale/Handheld-Color-Space-Project/blob/main/README.md#calculate-rgb--cie-xyz-conversion-matrix)
    - [Calculate the Chromatic Adaptation Transform (CAT) Matrix](https://github.com/Brankale/Handheld-Color-Space-Project/blob/main/README.md#calculate-the-chromatic-adaptation-transform-cat-matrix)
 
@@ -429,6 +432,31 @@ $`
 > Since there are few publicly available resources to support precise calculations with these models, the Bradford matrix will be used to minimize the risk of errors.
 
 
+# Retroarch Shaders
+
+In the `handheld` folder, you’ll find the measured consoles and their corresponding RetroArch shaders.
+
+> [!NOTE]
+> Currently, only the sRGB color space is supported. I haven’t found a way to instruct RetroArch or the operating system (at least on macOS) to interpret the shader’s output framebuffer as a non‑sRGB color space (such as Display P3, Rec. 2020, etc.). Given this limitation, there’s little benefit in supporting other color spaces, since you wouldn’t get the expected colors. If you know of any way (even a partial workaround) to overcome this limitation, I’d appreciate your support.
+
+## Shader parameters
+
+### Chromatic Adaptation
+
+Every shader includes a `Chromatic Adaptation` option. Depending on how you set it, you will get different results:
+
+- **OFF**: Enables “**absolute color accuracy**”, meaning colors match the console’s screen exactly (except for out-of-gamut colors). Use this setting for side-by-side comparisons between your display and the console’s screen.
+
+- **ON**: Enables “**perceptual color accuracy**”, which models the eye’s chromatic adaptation (the brain’s way of interpreting the same colors under different illuminants). This is the default option because it:
+   - Removes screen tinting by using the D65 illuminant, helping mitigate the “screen lottery” where different panels have slight color variations.
+   - Reduces out-of-gamut colors, lowering Delta E.
+
+
+#### Example
+
+Chromatic adaptation on the GameBoy Micro shader (**OFF** = "blue tinted / cool temperature greyscale", **ON** = "neutral greyscale")
+
+<img width="592" height="500" alt="chromatic adaptation" src="https://github.com/user-attachments/assets/4a452df8-e732-4c4f-9de6-2d2bd965f2a6" />
 
 
 # External links
