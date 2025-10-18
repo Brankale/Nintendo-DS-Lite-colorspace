@@ -16,7 +16,9 @@
    - [Measurements Validation](https://github.com/Brankale/Handheld-Color-Space-Project/blob/main/README.md#measurements-validation)
 - [Retroarch Shaders](https://github.com/Brankale/Handheld-Color-Space-Project/edit/main/README.md#retroarch-shaders)
    -  [Shader parameters](https://github.com/Brankale/Handheld-Color-Space-Project/edit/main/README.md#shader-parameters)
-      -  [Chromatic Adaptation](https://github.com/Brankale/Handheld-Color-Space-Project/edit/main/README.md#chromatic-adaptation)
+      - [Chromatic Adaptation](https://github.com/Brankale/Handheld-Color-Space-Project/edit/main/README.md#chromatic-adaptation)
+   -  [Debug Shader parameters](https://github.com/Brankale/Handheld-Color-Space-Project/edit/main/README.md#debug-shader-parameters)
+      - [Show out of Gamut colors](https://github.com/Brankale/Handheld-Color-Space-Project/edit/main/README.md#show-out-of-gamut-colours) 
 - [Colorspace conversion Math](https://github.com/Brankale/Handheld-Color-Space-Project/blob/main/README.md#colorspace-conversion-math)
    - [Calculate RGB => CIE XYZ conversion matrix](https://github.com/Brankale/Handheld-Color-Space-Project/blob/main/README.md#calculate-rgb--cie-xyz-conversion-matrix)
    - [Calculate the Chromatic Adaptation Transform (CAT) Matrix](https://github.com/Brankale/Handheld-Color-Space-Project/blob/main/README.md#calculate-the-chromatic-adaptation-transform-cat-matrix)
@@ -439,7 +441,13 @@ In the `handheld` folder, you’ll find the measured consoles and their correspo
 > [!NOTE]
 > Currently, only the sRGB color space is supported. I haven’t found a way to instruct RetroArch or the operating system (at least on macOS) to interpret the shader’s output framebuffer as a non‑sRGB color space (such as Display P3, Rec. 2020, etc.). Given this limitation, there’s little benefit in supporting other color spaces, since you wouldn’t get the expected colors. If you know of any way (even a partial workaround) to overcome this limitation, I’d appreciate your support.
 
+> [!NOTE]
+> Some consoles has two shader variants: with and without a CLUT (Color Look-Up Table). Currently, both variants are identical, but I plan to improve the CLUT version by computing out-of-gamut colors to match the closest perceptually equivalent color in the target color space, rather than simply hard-clipping the RGB values.
+
 ## Shader parameters
+
+> [!NOTE]
+> Only available in the non‑LUT shader version.
 
 ### Chromatic Adaptation
 
@@ -458,6 +466,16 @@ Chromatic adaptation on the GameBoy Micro shader (**OFF** = "blue tinted / cool 
 
 <img width="592" height="500" alt="chromatic adaptation" src="https://github.com/user-attachments/assets/4a452df8-e732-4c4f-9de6-2d2bd965f2a6" />
 
+## Debug Shader parameters
+
+> [!NOTE]
+> Only available in the non‑LUT shader version.
+
+These parameters are used to analyze the shader's output image.
+
+### Show out of Gamut colours
+
+Enable this option to highlight in red the colors that cannot be represented in the sRGB color space. These colors are only approximations.
 
 # External links
 1. https://www.audioholics.com/news/nintendo-ds-price-fixing
