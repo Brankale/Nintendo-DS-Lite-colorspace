@@ -7,6 +7,20 @@
 > [!WARNING]
 > Be aware that, at the moment, handheld shaders may contain errors due to floating-point rounding errors (especially in the computed colorspace matrices), suboptimal algorithms, and similar issues.
 
+# Index
+
+- [Displays types](https://github.com/Brankale/Handheld-Color-Space-Project/blob/main/README.md#displays-types)
+   - [Measurements tools](https://github.com/Brankale/Handheld-Color-Space-Project/edit/main/README.md#measurements-tools) 
+- [Handhelds status report](https://github.com/Brankale/Handheld-Color-Space-Project/blob/main/README.md#handhelds-status-report)
+- [Do the measurements](https://github.com/Brankale/Handheld-Color-Space-Project/blob/main/README.md#do-the-measurements)
+   - [Introduction](https://github.com/Brankale/Handheld-Color-Space-Project/blob/main/README.md#introduction)
+   - [Measurements guide for emissive displays](https://github.com/Brankale/Handheld-Color-Space-Project/blob/main/README.md#measurements-guide-for-emissive-displays)
+   - [Measurements report (template)](https://github.com/Brankale/Handheld-Color-Space-Project/blob/main/README.md#measurements-report-template)
+   - [Measurements Validation](https://github.com/Brankale/Handheld-Color-Space-Project/blob/main/README.md#measurements-validation)
+ - [Colorspace conversion Math](https://github.com/Brankale/Handheld-Color-Space-Project/blob/main/README.md#colorspace-conversion-math)
+   - [Calculate RGB => CIE XYZ conversion matrix](https://github.com/Brankale/Handheld-Color-Space-Project/blob/main/README.md#calculate-rgb--cie-xyz-conversion-matrix)
+   - [Calculate the Chromatic Adaptation Transform (CAT) Matrix](https://github.com/Brankale/Handheld-Color-Space-Project/blob/main/README.md#calculate-the-chromatic-adaptation-transform-cat-matrix)
+
 # Displays types
 
 - `Emissive`: the display **emits its own light** (no external illumination needed).
@@ -157,7 +171,7 @@ Individual Red, Green and Blue gamma curves (10%-90%) + near black (1%-4%) & nea
 > Always share your full measurement data in a readable format, along with the raw files (e.g., `.chc` files if you use HCFR). This ensures that others can review and verify your work.
 > If you only share the final results (such as shaders or LUTs) without the underlying data, your work cannot be reproduced or improved upon.
 
-# **Measurements Validation**
+## **Measurements Validation**
 
 To validate the results of a colorspace conversion:
 
