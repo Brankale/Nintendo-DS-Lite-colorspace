@@ -14,7 +14,12 @@
    - [Measurements guide for emissive displays](https://github.com/Brankale/Handheld-Color-Space-Project/blob/main/README.md#measurements-guide-for-emissive-displays)
    - [Measurements report (template)](https://github.com/Brankale/Handheld-Color-Space-Project/blob/main/README.md#measurements-report-template)
    - [Measurements Validation](https://github.com/Brankale/Handheld-Color-Space-Project/blob/main/README.md#measurements-validation)
- - [Colorspace conversion Math](https://github.com/Brankale/Handheld-Color-Space-Project/blob/main/README.md#colorspace-conversion-math)
+- [Retroarch Shaders](https://github.com/Brankale/Handheld-Color-Space-Project/edit/main/README.md#retroarch-shaders)
+   -  [Shader parameters](https://github.com/Brankale/Handheld-Color-Space-Project/edit/main/README.md#shader-parameters)
+      - [Chromatic Adaptation](https://github.com/Brankale/Handheld-Color-Space-Project/edit/main/README.md#chromatic-adaptation)
+   -  [Debug Shader parameters](https://github.com/Brankale/Handheld-Color-Space-Project/edit/main/README.md#debug-shader-parameters)
+      - [Show out of Gamut colors](https://github.com/Brankale/Handheld-Color-Space-Project/edit/main/README.md#show-out-of-gamut-colours) 
+- [Colorspace conversion Math](https://github.com/Brankale/Handheld-Color-Space-Project/blob/main/README.md#colorspace-conversion-math)
    - [Calculate RGB => CIE XYZ conversion matrix](https://github.com/Brankale/Handheld-Color-Space-Project/blob/main/README.md#calculate-rgb--cie-xyz-conversion-matrix)
    - [Calculate the Chromatic Adaptation Transform (CAT) Matrix](https://github.com/Brankale/Handheld-Color-Space-Project/blob/main/README.md#calculate-the-chromatic-adaptation-transform-cat-matrix)
 
@@ -80,14 +85,24 @@ Legend:
 
 Handheld LCD screens present several challenges:
 - color variations depending on the **viewing angle** (especially on TN panels).
-- variation in **color tint/brightness/gamma** caused by the 'screen lottery' phenomenon in certain handhelds (e.g. the 3DS), where manufacturing tolerances cause units with the same nominal display model to exhibit distinct color characteristics.
-- different **screen manufacturers**: some handhelds have different screen manufacturers (e.g. NDS Lite has LCD screens coming from Hitachi and Sharp (1)(2)) which can cause color variations across different units of the same handheld. 
+- variation in **color tint/brightness/gamma** caused by the 'screen lottery' phenomenon in certain handhelds (e.g. the 3DS), where manufacturing tolerances cause units with the same nominal display model to exhibit distinct color characteristics. 
+- different **screen manufacturers**: some handhelds have different screen manufacturers (e.g. NDS Lite has LCD screens coming from Hitachi and Sharp (1)(2)) which can cause color variations across different units of the same handheld.
 - **screen protectors and touchscreens** (aka screen digitizers) can affect color accuracy, especially if they are old and have been exposed to sunlight, which can degrade the plastic and cause a yellowish tint.
 
 The goal is to **measure the best possible scenario**, removing all the factors which can degrade image quality.
 
 > [!IMPORTANT]
 > Measurements of mods (e.g., IPS and OLED panel replacements) is allowed but only if clearly documented.
+
+### Examples of "screen lottery"
+
+<img width="600" alt="chromatic adaptation" src="https://github.com/user-attachments/assets/5c68e899-6484-4fdb-a915-a40d6258efcb"/>
+
+GameBoy Advance SP AGS-??? by Pica200 ([libretro post link](https://forums.libretro.com/t/real-gba-and-ds-phat-colors/1540/295))
+
+<img width="600" alt="chromatic adaptation" src="https://github.com/user-attachments/assets/94e169b0-469c-4f04-81e3-cea470034200"/>
+
+GameBoy Advance SP AGS-001 by mckimiaklopa ([libretro post link](https://forums.libretro.com/t/real-gba-and-ds-phat-colors/1540/271))
 
 ## Measurements guide for emissive displays
 
@@ -274,18 +289,11 @@ $`
 `$
 
 > [!NOTE]
-> Given CIELUV coordinates, CIE xyY coordinates are:
->
-> $` x = \frac{9u'}{6u'-16v'+12} `$ 
-> 
-> $` y = \frac{4v'}{6u'-16v'+12} `$
-
-> [!NOTE]
 > Given CIE xyY coordinates, CIE XYZ coordinates are:
 > 
-> $` X = \frac{x}{y}Y = \frac{9u'}{4v'}Y `$
+> $` X = \frac{x}{y}Y `$
 > 
-> $` Z = \frac{1-x-y}{y}Y = \frac{12-3u'-20v'}{4v'}Y `$
+> $` Z = \frac{1-x-y}{y}Y `$
 
 ## Calculate the Chromatic Adaptation Transform (CAT) Matrix
 
@@ -428,8 +436,79 @@ $`
 > (*) CIECAT02 and its revision CIECAT16 should provide higher accuracy than the Bradford matrix, however they likely involve more complex operations than a simple 3×3 matrix multiplication as can be seen here: https://en.wikipedia.org/wiki/CIECAM02.
 > Since there are few publicly available resources to support precise calculations with these models, the Bradford matrix will be used to minimize the risk of errors.
 
+## Calculate gamma of the primaries from the greyscale (for emissive displays)
+
+> [!WARNING]
+> this section is a draft
+
+In emissive displays you can sum XYZ coordinates of the primaries.
+e.g.  X_{red} + X_{green} + X_{blue} = X_{white} \\
+
+XYZ coordinates of the primaries, XYZ coordinates of a grey color at position x in [0.0, 1.0] where 0.0 is black and 1.0 is white:
+
+Solve the system of three equations:
+
+$`
+\begin{equation}
+    \begin{cases}
+      a \cdot X_{r} + b \cdot X_{g} + c \cdot X_{b} = X_{greyscale}(x) \\
+      a \cdot Y_{r} + b \cdot Y_{g} + c \cdot Y_{b} = Y_{greyscale}(x) \\
+      a \cdot Z_{r} + b \cdot Z_{g} + c \cdot Z_{b} = Z_{greyscale}(x) \\
+    \end{cases}
+\end{equation}
+`$
+
+$`
+\begin{align}
+    & \gamma_{r} = \log_{x}(a) &
+    & \gamma_{g} = \log_{x}(b) &
+    & \gamma_{b} = \log_{x}(c) &
+\end{align}
+`$
 
 
+# Retroarch Shaders
+
+In the `handheld` folder, you’ll find the measured consoles and their corresponding RetroArch shaders.
+
+> [!NOTE]
+> Currently, only the sRGB color space is supported. I haven’t found a way to instruct RetroArch or the operating system (at least on macOS) to interpret the shader’s output framebuffer as a non‑sRGB color space (such as Display P3, Rec. 2020, etc.). Given this limitation, there’s little benefit in supporting other color spaces, since you wouldn’t get the expected colors. If you know of any way (even a partial workaround) to overcome this limitation, I’d appreciate your support.
+
+> [!NOTE]
+> Some consoles has two shader variants: with and without a CLUT (Color Look-Up Table). Currently, both variants are identical, but I plan to improve the CLUT version by computing out-of-gamut colors to match the closest perceptually equivalent color in the target color space, rather than simply hard-clipping the RGB values.
+
+## Shader parameters
+
+> [!NOTE]
+> Only available in the non‑LUT shader version.
+
+### Chromatic Adaptation
+
+Every shader includes a `Chromatic Adaptation` option. Depending on how you set it, you will get different results:
+
+- **OFF**: Enables “**absolute color accuracy**”, meaning colors match the console’s screen exactly (except for out-of-gamut colors). Use this setting for side-by-side comparisons between your display and the console’s screen.
+
+- **ON**: Enables “**perceptual color accuracy**”, which models the eye’s chromatic adaptation (the brain’s way of interpreting the same colors under different illuminants). This is the default option because it:
+   - Removes screen tinting by using the D65 illuminant, helping mitigate the “screen lottery” where different panels have slight color variations.
+   - Reduces out-of-gamut colors, lowering Delta E.
+
+
+#### Example
+
+Chromatic adaptation on the GameBoy Micro shader (**OFF** = "blue tinted / cool temperature greyscale", **ON** = "neutral greyscale")
+
+<img width="592" height="500" alt="chromatic adaptation" src="https://github.com/user-attachments/assets/4a452df8-e732-4c4f-9de6-2d2bd965f2a6" />
+
+## Debug Shader parameters
+
+> [!NOTE]
+> Only available in the non‑LUT shader version.
+
+These parameters are used to analyze the shader's output image.
+
+### Show out of Gamut colours
+
+Enable this option to highlight in red the colors that cannot be represented in the sRGB color space. These colors are only approximations.
 
 # External links
 1. https://www.audioholics.com/news/nintendo-ds-price-fixing
