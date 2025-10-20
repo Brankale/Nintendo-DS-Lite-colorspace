@@ -436,6 +436,36 @@ $`
 > (*) CIECAT02 and its revision CIECAT16 should provide higher accuracy than the Bradford matrix, however they likely involve more complex operations than a simple 3×3 matrix multiplication as can be seen here: https://en.wikipedia.org/wiki/CIECAM02.
 > Since there are few publicly available resources to support precise calculations with these models, the Bradford matrix will be used to minimize the risk of errors.
 
+## Calculate gamma of the primaries from the greyscale (for emissive displays)
+
+> [!WARNING]
+> this section is a draft
+
+In emissive displays you can sum XYZ coordinates of the primaries.
+e.g.  X_{red} + X_{green} + X_{blue} = X_{white} \\
+
+XYZ coordinates of the primaries, XYZ coordinates of a grey color at position x in [0.0, 1.0] where 0.0 is black and 1.0 is white:
+
+Solve the system of three equations:
+
+$`
+\begin{equation}
+    \begin{cases}
+      a \cdot X_{r} + b \cdot X_{g} + c \cdot X_{b} = X_{greyscale}(x) \\
+      a \cdot Y_{r} + b \cdot Y_{g} + c \cdot Y_{b} = Y_{greyscale}(x) \\
+      a \cdot Z_{r} + b \cdot Z_{g} + c \cdot Z_{b} = Z_{greyscale}(x) \\
+    \end{cases}
+\end{equation}
+`$
+
+$`
+\begin{align}
+    & \gamma_{r} = \log_{x}(a) &
+    & \gamma_{g} = \log_{x}(b) &
+    & \gamma_{b} = \log_{x}(c) &
+\end{align}
+`$
+
 
 # Retroarch Shaders
 
