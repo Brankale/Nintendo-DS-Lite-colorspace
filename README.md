@@ -477,6 +477,7 @@ In the `handheld` folder, you’ll find the measured consoles and their correspo
 > [!NOTE]
 > Some consoles has two shader variants: with and without a CLUT (Color Look-Up Table). Currently, both variants are identical, but I plan to improve the CLUT version by computing out-of-gamut colors to match the closest perceptually equivalent color in the target color space, rather than simply hard-clipping the RGB values.
 
+
 ## Shader parameters
 
 > [!NOTE]
@@ -509,6 +510,15 @@ These parameters are used to analyze the shader's output image.
 ### Show out of Gamut colours
 
 Enable this option to highlight in red the colors that cannot be represented in the sRGB color space. These colors are only approximations.
+
+
+# Special Thanks
+
+- **Pokéfan531** for almost all the consoles’ screen measurements and feedback
+- **Pica200** for the 3DS and New 3DS consoles’ measurements
+- **Libretro Forum**
+   - forum thread: https://forums.libretro.com/t/real-gba-and-ds-phat-colors/1540
+
 
 # External links
 1. https://www.audioholics.com/news/nintendo-ds-price-fixing
