@@ -48,30 +48,30 @@ Depending on the display type, you must use the appropriate meter to ensure accu
 
 | Handheld  | Display Type | Display Data Collected? | Known Manufacturers | Measurements Notes |
 | ------------- | :-------------: | :-------------: |  :-------------: | :------------- |
-| `Game Boy` |  Reflective | 🔴 | Unknown | |
-| `Game Boy Pocket` |  Reflective | 🔴 | Unknown | |
-| `Game Boy Light` |  Emissive | 🔴 | Unknown | |
-| `Game Boy Color` |  Reflective | 🕙 WIP | Unknown | |
-| `Game Boy Micro` |  Emissive | 🔵 | Unknown | - unknown manufacturer |
-| `Game Boy Advance` |  Reflective | 🔴 | Unknown | | 
-| `Game Boy Advance SP AGS-001` |  Emissive (frontlit on),<br> Reflective (frontlit off) | 🔴 | Unknown | |
-| `Game Boy Advance SP AGS-101` |  Emissive | 🔵 | Unknown | - unknown manufacturer |
-| `NDS Phat` |  Emissive | 🔵 | Unknown | - unknown manufacturer |
+| `Game Boy` |  Reflective | 🔴 | ? | |
+| `Game Boy Pocket` |  Reflective | 🔴 | ? | |
+| `Game Boy Light` |  Emissive | 🔴 | ? | |
+| `Game Boy Color` |  Reflective | 🕙 WIP | ? | |
+| `Game Boy Micro` |  Emissive | 🔵 | ? | - unknown manufacturer |
+| `Game Boy Advance` |  Reflective | 🕙 WIP | ? | | 
+| `Game Boy Advance SP AGS-001` |  Emissive (frontlit on),<br> Reflective (frontlit off) | 🕙 WIP | ? | |
+| `Game Boy Advance SP AGS-101` |  Emissive | 🔵 | ? | - unknown manufacturer |
+| `NDS Phat` |  Emissive | 🔵 | ? | - unknown manufacturer |
 | `NDS Lite` |  Emissive | 🟡 | (2) Hitachi, Sharp | - unknown manufacturer<br>- greyscale gamma differs between reports (different manufacturers?) |
-| `NDSi` |  Emissive | 🔴 | Unknown | |
-| `NDSi XL` |  Emissive | 🔴 | Unknown |  |
-| `3DS` |  Emissive | 🔵 | Unknown | - unknown manufacturer |
-| `3DS XL` |  Emissive | 🔴 | Unknown |  |
-| `2DS` |  Emissive | 🔴 | Unknown |  |
-| `New 3DS` |  Emissive | 🔴 | Unknown | |
-| `New 3DS XL` |  Emissive | 🟡 <br>[other info here - Erica Griffin](https://www.youtube.com/watch?v=QvDdaVZ7MCU) | Unknown | - only IPS top screen analyzed<br>- screen lottery<br>- unknown manufacturer |
-| `New 2DS` |  Emissive | 🔴 | Unknown |  |
-| `New 2DS XL` |  Emissive | 🔴 | Unknown | |
-| `Wii U` |  Emissive | 🔴 | Unknown | |
-| `Switch` |  Emissive | 🔴 <br>[info here - Erica Griffin](https://www.youtube.com/watch?v=QvDdaVZ7MCU) | Unknown | |
-| `Switch Mini` |  Emissive | 🔴 | Unknown | |
-| `Switch OLED` |  Emissive | 🔴 <br>[info here - GamingTech](https://www.youtube.com/watch?v=mYnUdYoh_xc) | Unknown | |
-| `Switch 2` |  Emissive | 🔴 | Unknown | |
+| `NDSi` |  Emissive | 🔴 | ? | |
+| `NDSi XL` |  Emissive | 🔴 | ? |  |
+| `3DS` |  Emissive | 🔵 | ? | - unknown manufacturer |
+| `3DS XL` |  Emissive | 🔴 | ? |  |
+| `2DS` |  Emissive | 🔴 | ? |  |
+| `New 3DS` |  Emissive | 🔴 | ? | |
+| `New 3DS XL` |  Emissive | 🟡 <br>[other info here - Erica Griffin](https://www.youtube.com/watch?v=QvDdaVZ7MCU) | ? | - only IPS top screen analyzed<br>- screen lottery<br>- unknown manufacturer |
+| `New 2DS` |  Emissive | 🔴 | ? |  |
+| `New 2DS XL` |  Emissive | 🔴 | ? | |
+| `Wii U` |  Emissive | 🔴 | ? | |
+| `Switch` |  Emissive | 🔴 <br>[info here - Erica Griffin](https://www.youtube.com/watch?v=QvDdaVZ7MCU) | ? | |
+| `Switch Mini` |  Emissive | 🔴 | ? | |
+| `Switch OLED` |  Emissive | 🔴 <br>[info here - GamingTech](https://www.youtube.com/watch?v=mYnUdYoh_xc) | ? | |
+| `Switch 2` |  Emissive | 🔴 | ? | |
 
 Legend:
 - 🔴: No data available or not yet analyzed
