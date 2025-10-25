@@ -128,34 +128,26 @@ To achieve reproducible and accurate measurements, you must:
 ### What to Measure
 
 To accurately characterize a handheld screen’s colorspace, you should record the following data:
-* **Chromaticity coordinates** of the three primaries (R, G, B).
-* **Chromaticity coordinates of the white point (W)**.
-* **Individual Gamma response of the three channels (R, G, B)**:
-  * Use stepped ramps with increments of **10% or smaller** for greater accuracy.
-  * Include additional fine measurements near **white (96%–99%)** and **black (1%–4%)** levels, as these regions are the most prone to errors.
-* **Maximum luminance (full white)** of the display.
-* **Minimum luminance (full black)** of the display.
+* Chromaticity coordinates of:
+   * Red, Green, Blue
+   * Yellow, Cyan, Magenta
+   * Black, White
+* Chromaticity coordinates of the greyscale:
+   * Measure the entire grayscale range from black to white.
+   * The number of color patches to measure must be a power of two (e.g., 32 patches, 64 patches, 128 patches, etc.) to facilitate integration with shaders.
+   * The maximum number of patches to measure depends on the screen’s bit depth (e.g., the GBC has a 5-bit depth, so the number of patches to measure is 2^5 = 32).
+   * As a general recommendation, measure at least 32 grayscale patches to ensure sufficient accuracy.
 
-If the handheld has multiple screens (e.g., Nintendo DS family), measure **both top and bottom panels**.
-* In some systems (e.g., NDS Lite), the panels are identical, but the bottom screen includes a **touch layer** that can slightly degrade image quality.
-* If you want to reduce workload, prioritize measuring the **non-touch screen**, as it represents the display’s best possible performance.
-
-> [!IMPORTANT]
-> Using only the greyscale gamma curve is not enough to get accurate results. To make things clear, think the greyscale gamma as the mean between the red gamma (γR), the green gamma (γG) and the blue gamma (γB) (this is an oversemplification, this is not actually a mean). You can have a greyscale gamma of 2.2 which seems great but this can be the results of both (γR = 2.2, γG = 2.2, γB = 2.2) and (γR = 2.9, γG = 2.2, γB = 1.5) which leads to completely different colors.
+> [!NOTE]
+> If the handheld has multiple screens (e.g., Nintendo DS family), **measure both top and bottom panels**.
 
 #### Example (using HCFR software)
 
-R, G and B channels chromaticity coordinates (CIE xyY coordinates):
+R, G, B, Y, C, M, Black, White chromaticity coordinates (expressed as CIE xyY coordinates in this example):
 <img width="640" height="360" alt="Screenshot From 2025-09-03 16-44-40" src="https://github.com/user-attachments/assets/c5f60803-f372-4492-9f95-d2b5de59b2b2" />
 
-White chromaticity coordinates (CIE xyY coordinates) + white/black luminance:
+Greyscale chromaticity coordinates (expressed as CIE xyY coordinates in this example):
 <img width="640" height="360" alt="Screenshot From 2025-09-03 16-44-50" src="https://github.com/user-attachments/assets/1f97ca9c-6f21-4f67-966b-7b58643b0e8f" />
-
-Individual Red, Green and Blue gamma curves (10%-90%) + near black (1%-4%) & near white gamma (96%-99%):
-<img width="640" height="360" alt="Screenshot From 2025-09-03 16-41-30" src="https://github.com/user-attachments/assets/0da55b1e-0ed9-4180-984f-b7dba6b7bda5" />
-<img width="640" height="360" alt="Screenshot From 2025-09-03 16-42-56" src="https://github.com/user-attachments/assets/a7dbbe27-1221-4b59-b534-2eef6343097d" />
-<img width="640" height="360" alt="Screenshot From 2025-09-03 16-43-21" src="https://github.com/user-attachments/assets/e3d8ee77-480a-4828-acb9-23a16e1e4623" />
-
 
 ## Measurements report (template)
 
@@ -440,6 +432,9 @@ $`
 
 > [!WARNING]
 > this section is a draft
+
+> [!IMPORTANT]
+> Using only the greyscale gamma curve is not enough to get accurate results. To make things clear, think the greyscale gamma as the mean between the red gamma (γR), the green gamma (γG) and the blue gamma (γB) (this is an oversemplification, this is not actually a mean). You can have a greyscale gamma of 2.2 which seems great but this can be the results of both (γR = 2.2, γG = 2.2, γB = 2.2) and (γR = 2.9, γG = 2.2, γB = 1.5) which leads to completely different colors.
 
 In emissive displays you can sum XYZ coordinates of the primaries.
 e.g.  X_{red} + X_{green} + X_{blue} = X_{white} \\
