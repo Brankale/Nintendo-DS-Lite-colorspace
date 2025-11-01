@@ -35,11 +35,12 @@ Depending on the display type, you must use the appropriate meter to ensure accu
 
 | Meter  | Emissive | Reflective | Transflective |
 | ------------- | :-------------: | :-------------: | :-------------: | 
-| Colorimeter        | ✅ good accuracy | ❓ | ❓ |
-| Spectroradiometer  | ✅ highest accuracy | ❓ | ❓ |
-| Spectrophotometer  | ⚠️ not recommended (*) | ✅ | ❓ |
+| Colorimeter        | ✅ good accuracy | ⚠️ not recommended (2) | ❓ |
+| Spectroradiometer  | ✅ highest accuracy | ⚠️ not recommended (2) | ❓ |
+| Spectrophotometer  | ⚠️ not recommended (1) | ✅ | ❓ |
 
-(*) [AI provided info] A spectrophotometer primarily measures reflected light from surfaces. Some models have an “emissive mode,” but they’re generally slower, less sensitive at low light, and not ideal for bright HDR peaks or very dark near-black, common in emissive displays.
+(1) [AI provided info] A spectrophotometer primarily measures reflected light from surfaces. Some models have an “emissive mode,” but they’re generally slower, less sensitive at low light, and not ideal for bright HDR peaks or very dark near-black, common in emissive displays.
+(2) [AI provided info]
 
 # Handhelds status report
 
@@ -54,7 +55,7 @@ Depending on the display type, you must use the appropriate meter to ensure accu
 | `Game Boy Color` |  Reflective | 🕙 WIP | ? | |
 | `Game Boy Micro` |  Emissive | 🔵 | ? | - unknown manufacturer |
 | `Game Boy Advance` |  Reflective | 🕙 WIP | ? | | 
-| `Game Boy Advance SP AGS-001` |  Emissive (frontlit on),<br> Reflective (frontlit off) | 🕙 WIP | ? | |
+| `Game Boy Advance SP AGS-001` |  Transflective<br>(frontlit on),<br>Reflective<br>(frontlit off) | 🕙 WIP | ? | |
 | `Game Boy Advance SP AGS-101` |  Emissive | 🔵 | ? | - unknown manufacturer |
 | `NDS Phat` |  Emissive | 🔵 | ? | - unknown manufacturer |
 | `NDS Lite` |  Emissive | 🟡 | (2) Hitachi, Sharp | - unknown manufacturer<br>- greyscale gamma differs between reports (different manufacturers?) |
